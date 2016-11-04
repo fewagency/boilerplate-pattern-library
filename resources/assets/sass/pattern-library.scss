@@ -24,13 +24,12 @@
     align-items: center;
 
     > li {
-      margin: .5em;
-      border-radius: .5em;
-      border: 1px solid currentColor;
-
       > a {
         display: inline-block;
+        margin: .5em;
         padding: .5em;
+        border-radius: .5em;
+        border: 1px solid currentColor;
         color: currentColor;
         text-decoration: none;
       }
