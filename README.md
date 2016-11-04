@@ -9,6 +9,9 @@
 We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project root
 and then `gulp` or `gulp watch` will build the assets during development.
 
+For *browsersync* to work locally you need to set its `proxy` configuration in `gulpfile.js` to the
+actual url used in your development environment.
+
 ## Deploy
 1. Install all dependencies for the build in the build environment
 (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
