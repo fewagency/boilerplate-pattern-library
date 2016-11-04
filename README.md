@@ -1,5 +1,25 @@
 # Pattern Library Boilerplate
 
+## How to use this repo as a boilerplate to start a new project
+Clone this repo with `-o boilerplate` which will name the initial remote *boilerplate* instead of *origin*:
+
+```shell
+git clone -o boilerplate git@github.com:fewagency/boilerplate-pattern-library.git NEW_PROJECT_DIR
+```
+
+Then create a new git repo (in github) and set it up as a new remote in your local project:
+ 
+```shell
+git remote add origin GIT_URL_FOR_EMPTY_REPO
+```
+
+After this `git push origin master` should push the code into your new remote repo.
+
+
+This method is inspired by http://stackoverflow.com/questions/4096448/git-workflow-using-one-repo-as-the-basis-for-another
+
+Another method could be http://www.tekkie.ro/methodology/use-git-checkout-index-initialise-project-from-boilerplate-repository/
+
 ## Development installation
 1. Clone the git-repository into a directory of your choice.
 2. In the project directory, run `composer create-project` to bootstrap and install dependencies.
