@@ -15,10 +15,15 @@ git remote add origin GIT_URL_FOR_EMPTY_REPO
 
 After this `git push origin master` should push the code into your new remote repo.
 
-
 This method is inspired by http://stackoverflow.com/questions/4096448/git-workflow-using-one-repo-as-the-basis-for-another
 
 Another method could be http://www.tekkie.ro/methodology/use-git-checkout-index-initialise-project-from-boilerplate-repository/
+
+Other ways to do it is to just get a zip file of this repo from github, or clone the repo and then recursively remove
+all `.git` folders.
+
+Remember to remove this section from this README.MD as it won't be relevant when your new project no longer is a
+boilerplate repo!
 
 ## Development installation
 1. Clone the git-repository into a directory of your choice.
