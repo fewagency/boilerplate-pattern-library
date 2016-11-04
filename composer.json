@@ -1,0 +1,15 @@
+{
+  "name": "fewagency/boilerplate-pattern-library",
+  "description": "A boilerplate setup for a PHP-driven site with a pattern-library",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "FEW",
+      "email": "developers@fewagency.se"
+    }
+  ],
+  "require": {
+    "fewagency/macropiche": "dev-master"
+  }
+}

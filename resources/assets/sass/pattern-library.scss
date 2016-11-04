@@ -1,0 +1,72 @@
+@import "variables";
+@import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
+
+.pattern-library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $brand-a;
+
+  /*
+  * Break out of any container and become full width!
+  * https://css-tricks.com/full-width-containers-limited-width-parents/
+  */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  padding: 0.5em;
+
+  > nav > ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    > li {
+      margin: .5em;
+      border-radius: .5em;
+      border: 1px solid currentColor;
+
+      > a {
+        display: inline-block;
+        padding: .5em;
+        color: currentColor;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#m893690-resources\/components\/colors {
+  dd {
+    font-size: 2em;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 3em;
+      height: 3em;
+      margin-right: .5em;
+      background-color: currentColor;
+      vertical-align: middle;
+    }
+  }
+
+  .brand-a-color {
+    color: $brand-a;
+  }
+  .brand-b-color {
+    color: $brand-b;
+  }
+  .brand-c-color {
+    color: $brand-c;
+  }
+  .brand-d-color {
+    color: $brand-d;
+  }
+
+}
+
+.macropiche__code > code, .macropiche__code-output > code {
+  word-wrap: break-word;
+}

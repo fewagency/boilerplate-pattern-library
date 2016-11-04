@@ -1,0 +1,71 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "9af11ce337d0e2ea76a58bbfe76eda6b",
+    "content-hash": "f6c91b3d290b59beb1e60528c1ca82f8",
+    "packages": [
+        {
+            "name": "fewagency/macropiche",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fewagency/macropiche.git",
+                "reference": "83a696ffd80b9d79f29b232b5b5dafe2ee4578dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fewagency/macropiche/zipball/83a696ffd80b9d79f29b232b5b5dafe2ee4578dc",
+                "reference": "83a696ffd80b9d79f29b232b5b5dafe2ee4578dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/view": "^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/macropiche.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bjorn Nilsved",
+                    "email": "bjorn.nilsved@fewagency.se"
+                }
+            ],
+            "description": "HTML display of view-templates (of a pattern library)",
+            "keywords": [
+                "atomic",
+                "components",
+                "html",
+                "library",
+                "pattern",
+                "sample",
+                "sheet",
+                "snippet",
+                "template"
+            ],
+            "time": "2016-10-16 12:10:50"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "fewagency/macropiche": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
