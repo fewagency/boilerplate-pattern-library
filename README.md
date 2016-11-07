@@ -77,7 +77,8 @@ actual url used in your development environment.
   ```
 
   (This goes in the *Compile, compress, or minimize your code* section in Deploybot)
-3. The `node_modules` directory may be excluded from actual deploy after the build has finished.
+3. The `node_modules` directory may be excluded from actual deploy after the build has finished
+
   (This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
 
 ### When the build fails...
