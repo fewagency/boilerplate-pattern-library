@@ -8,7 +8,8 @@
   ```
   
 2. `cd` into the new project directory
-3. Create a new empty git repo (in github)
+3. Create a new empty git repo for your new project through your git service 
+(If on github, keep the resulting page open in your browser - it has some nifty commands you'll want to copy and use)
 4. Set the new repo up as a new remote with tracking (`-u`) in your local project:
   
   ```shell
@@ -18,9 +19,9 @@
   
   (These two lines can be copied from the page github displays after creating an empty repo) 
 5. In the project directory, run `composer update` to use the latest dependencies.
-6. Remove this section from docs - //TODO:
-Remember to remove this section about using the boilerplate from this README as it won't be relevant when your new
-project no longer represents a boilerplate repo!
+6. Remove this section from docs
+  //TODO: Remember to remove this section about using the boilerplate from this README as it won't be relevant when
+  your new project no longer represents a boilerplate repo!
 
 ### About boilerplate repo usage
 This method for installing boilerplate packages is inspired by
@@ -33,8 +34,8 @@ Other ways to do it is to just get a zip file of this repo from github and start
 or clone this repo and then recursively remove all `.git` folders.
 
 ## Development installation
-1. Clone the git-repository into a directory of your choice.
-2. In the project directory, run `composer create-project` to bootstrap and install composer dependencies.
+1. Clone the git-repository into a directory of your choice
+2. In the project directory, run `composer create-project` to bootstrap and install composer dependencies
 
 ### Building assets
 We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project root
@@ -44,7 +45,7 @@ For *browsersync* to work locally you need to set its `proxy` configuration in `
 actual url used in your development environment.
 
 ## Deploy
-1. Install all dependencies for the build in the build environment
+1. Install all dependencies for the build in the build environment:
   
   ```bash
   # refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
@@ -62,7 +63,7 @@ actual url used in your development environment.
   ```
   
   (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
-2. Build assets for production
+2. Build assets for production:
 
   ```bash
   # Make sure the node version specified in the .nvmrc file is used
@@ -74,7 +75,7 @@ actual url used in your development environment.
 
   (This goes in the *Compile, compress, or minimize your code* section in Deploybot)
 3. The `node_modules` directory may be excluded from actual deploy after the build has finished.
-(This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
+  (This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
 
 ### When the build fails...
 If the dependencies are successfully installed, but the build fails for some reason,
