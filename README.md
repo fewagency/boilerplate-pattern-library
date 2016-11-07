@@ -5,13 +5,16 @@
 ```shell
 git clone -o boilerplate git@github.com:fewagency/boilerplate-pattern-library.git NEW_PROJECT_DIR
 ```
-2. Create a new git repo (in github) and set it up as a new remote in your local project:
+2. `cd` into the new project directory
+3. Create a new git repo (in github)
+4. Set the new repo up as a new remote with tracking (`-u`) in your local project:
 ```shell
 git remote add origin GIT_URL_FOR_EMPTY_REPO
+git push -u origin master
 ```
-After this `git push origin master` should push the code into your new remote repo.
-3. In the project directory, run `composer update` to use the latest dependencies.
-4. Remove this section from docs -
+(These two lines can be copied from the page github displays after creating an empty repo) 
+5. In the project directory, run `composer update` to use the latest dependencies.
+6. Remove this section from docs -
 Remember to remove this section about using the boilerplate from this README as it won't be relevant when your new
 project no longer represents a boilerplate repo!
 
@@ -23,7 +26,7 @@ Another method could be
 http://www.tekkie.ro/methodology/use-git-checkout-index-initialise-project-from-boilerplate-repository/
 
 Other ways to do it is to just get a zip file of this repo from github and start from that,
-or clone the repo and then recursively remove all `.git` folders.
+or clone this repo and then recursively remove all `.git` folders.
 
 ## Development installation
 1. Clone the git-repository into a directory of your choice.
