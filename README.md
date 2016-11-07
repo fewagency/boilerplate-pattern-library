@@ -2,19 +2,23 @@
 
 ## How to use this repo as a boilerplate to start a new project
 1. Clone this repo with `-o boilerplate` which will name the initial remote *boilerplate* instead of *origin*:
-```shell
-git clone -o boilerplate git@github.com:fewagency/boilerplate-pattern-library.git NEW_PROJECT_DIR
-```
+  
+  ```shell
+  git clone -o boilerplate git@github.com:fewagency/boilerplate-pattern-library.git NEW_PROJECT_DIR
+  ```
+  
 2. `cd` into the new project directory
-3. Create a new git repo (in github)
+3. Create a new empty git repo (in github)
 4. Set the new repo up as a new remote with tracking (`-u`) in your local project:
-```shell
-git remote add origin GIT_URL_FOR_EMPTY_REPO
-git push -u origin master
-```
+  
+  ```shell
+  git remote add origin GIT_URL_FOR_EMPTY_REPO
+  git push -u origin master
+  ```
+  
 (These two lines can be copied from the page github displays after creating an empty repo) 
 5. In the project directory, run `composer update` to use the latest dependencies.
-6. Remove this section from docs -
+6. Remove this section from docs - //TODO:
 Remember to remove this section about using the boilerplate from this README as it won't be relevant when your new
 project no longer represents a boilerplate repo!
 
@@ -42,29 +46,33 @@ actual url used in your development environment.
 ## Deploy
 1. Install all dependencies for the build in the build environment
 (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
-```bash
-# refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
-
-# Make sure the node version specified in the .nvmrc file is used
-nvm install
-nvm use
-
-# Install node_modules
-npm install
-
-# Update composer and install composer dependencies for production
-/usr/local/bin/composer self-update
-composer install
-```
+  
+  ```bash
+  # refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
+  
+  # Make sure the node version specified in the .nvmrc file is used
+  nvm install
+  nvm use
+  
+  # Install node_modules
+  npm install
+  
+  # Update composer and install composer dependencies for production
+  /usr/local/bin/composer self-update
+  composer install
+  ```
+  
 2. Build assets for production
 (This goes in the *Compile, compress, or minimize your code* section in Deploybot)
-```bash
-# Make sure the node version specified in the .nvmrc file is used
-nvm use
 
-# Build assets for production
-gulp --production
-```
+  ```bash
+  # Make sure the node version specified in the .nvmrc file is used
+  nvm use
+  
+  # Build assets for production
+  gulp --production
+  ```
+  
 3. The `node_modules` directory may be excluded from actual deploy after the build has finished.
 (This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
 
