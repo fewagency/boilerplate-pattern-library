@@ -9,10 +9,14 @@ git clone -o boilerplate git@github.com:fewagency/boilerplate-pattern-library.gi
 ```shell
 git remote add origin GIT_URL_FOR_EMPTY_REPO
 ```
-
 After this `git push origin master` should push the code into your new remote repo.
+3. In the project directory, run `composer update` to use the latest dependencies.
+4. Remove this section from docs -
+Remember to remove this section about using the boilerplate from this README as it won't be relevant when your new
+project no longer represents a boilerplate repo!
 
-This method is inspired by
+### About boilerplate repo usage
+This method for installing boilerplate packages is inspired by
 http://stackoverflow.com/questions/4096448/git-workflow-using-one-repo-as-the-basis-for-another
 
 Another method could be
@@ -21,13 +25,9 @@ http://www.tekkie.ro/methodology/use-git-checkout-index-initialise-project-from-
 Other ways to do it is to just get a zip file of this repo from github and start from that,
 or clone the repo and then recursively remove all `.git` folders.
 
-Remember to remove this section from this README as it won't be relevant when your new project no longer represents a
-boilerplate repo!
-
 ## Development installation
 1. Clone the git-repository into a directory of your choice.
-2. In the project directory, run `composer create-project` to bootstrap and install dependencies.
-3. In the project directory, run `composer update` to use the latest dependencies.
+2. In the project directory, run `composer create-project` to bootstrap and install composer dependencies.
 
 ### Building assets
 We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project root
