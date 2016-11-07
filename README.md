@@ -21,10 +21,12 @@
   
   (These two lines can be copied from the page github displays after creating an empty repo) 
 5. In the project directory, run `composer update` to use the latest dependencies.
-6. Remove this section from docs
+6. Remove this section from docs & change the headline 
 
-  //TODO: Remember to remove this section about using the boilerplate from this README
+  //TODO: Remove this section about using the boilerplate from this README
   as it won't be relevant when your new project no longer represents a boilerplate repo!
+  
+  //TODO: Update the headline in this README to something suitable for your new project!
 
 ### About boilerplate repo usage
 This method for installing boilerplate packages is inspired by
