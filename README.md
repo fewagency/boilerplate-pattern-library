@@ -16,7 +16,7 @@
   git push -u origin master
   ```
   
-(These two lines can be copied from the page github displays after creating an empty repo) 
+  (These two lines can be copied from the page github displays after creating an empty repo) 
 5. In the project directory, run `composer update` to use the latest dependencies.
 6. Remove this section from docs - //TODO:
 Remember to remove this section about using the boilerplate from this README as it won't be relevant when your new
@@ -45,7 +45,6 @@ actual url used in your development environment.
 
 ## Deploy
 1. Install all dependencies for the build in the build environment
-(This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
   
   ```bash
   # refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
@@ -62,8 +61,8 @@ actual url used in your development environment.
   composer install
   ```
   
+  (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
 2. Build assets for production
-(This goes in the *Compile, compress, or minimize your code* section in Deploybot)
 
   ```bash
   # Make sure the node version specified in the .nvmrc file is used
@@ -72,7 +71,8 @@ actual url used in your development environment.
   # Build assets for production
   gulp --production
   ```
-  
+
+  (This goes in the *Compile, compress, or minimize your code* section in Deploybot)
 3. The `node_modules` directory may be excluded from actual deploy after the build has finished.
 (This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
 
