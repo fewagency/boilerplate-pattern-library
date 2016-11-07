@@ -9,8 +9,10 @@
   
 2. `cd` into the new project directory
 3. Create a new empty git repo for your new project through your git service 
-(If on github, keep the resulting page open in your browser - it has some nifty commands you'll want to copy and use)
-4. Set the new repo up as a new remote with tracking (`-u`) in your local project:
+  
+  (If that's on github, keep the resulting page open in your browser -
+  it has some nifty commands you'll want to copy and use below)
+4. Set up the new repo as a new remote with tracking (`-u`) in your local project:
   
   ```shell
   git remote add origin GIT_URL_FOR_EMPTY_REPO
@@ -20,8 +22,9 @@
   (These two lines can be copied from the page github displays after creating an empty repo) 
 5. In the project directory, run `composer update` to use the latest dependencies.
 6. Remove this section from docs
-  //TODO: Remember to remove this section about using the boilerplate from this README as it won't be relevant when
-  your new project no longer represents a boilerplate repo!
+
+  //TODO: Remember to remove this section about using the boilerplate from this README
+  as it won't be relevant when your new project no longer represents a boilerplate repo!
 
 ### About boilerplate repo usage
 This method for installing boilerplate packages is inspired by
