@@ -19,9 +19,18 @@
   git push -u origin master
   ```
   
-  (These two lines can be copied from the page github displays after creating an empty repo) 
+  (These two lines can be copied from the page github displays after creating an empty repo)
 5. In the project directory, run `composer update` to use the latest dependencies.
-6. Remove this section from docs & change the headline 
+6. You may (optionally) delete the default branch for the `boilerplate` remote:
+  
+  ```shell
+  git remote set-head boilerplate -d
+  ```
+  
+  (Removing the `boilerplate/HEAD` pointer from `boilerplate/master` means you will need to push specifically to
+  `boilerplate/master` instead of just `boilerplate` should you want to update something back into the original 
+  boilerplate repo from your new project)  
+7. Remove this section from docs & change the headline 
 
   //TODO: Remove this section about using the boilerplate from this README
   as it won't be relevant when your new project no longer represents a boilerplate repo!
