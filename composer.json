@@ -10,6 +10,6 @@
     }
   ],
   "require": {
-    "fewagency/macropiche": "dev-master"
+    "fewagency/macropiche": "^3.0"
   }
 }

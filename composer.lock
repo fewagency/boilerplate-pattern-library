@@ -4,12 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9af11ce337d0e2ea76a58bbfe76eda6b",
-    "content-hash": "f6c91b3d290b59beb1e60528c1ca82f8",
+    "hash": "0b247e86949b6bc0eaf7cf2073f0d076",
+    "content-hash": "d6eb8e007d0d48a0d2f7d191e8fa8590",
     "packages": [
         {
             "name": "fewagency/macropiche",
-            "version": "dev-master",
+            "version": "v3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fewagency/macropiche.git",
@@ -61,9 +61,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "fewagency/macropiche": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
