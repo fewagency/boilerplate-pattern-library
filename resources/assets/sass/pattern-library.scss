@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: $brand-a;
+  background-color: $brand-color;
 
   /*
   * Break out of any container and become full width!
@@ -51,19 +51,12 @@
     }
   }
 
-  .brand-a-color {
-    color: $brand-a;
+  .brand-color {
+    color: $brand-color;
   }
-  .brand-b-color {
-    color: $brand-b;
+  .brand-gray {
+    color: $brand-gray;
   }
-  .brand-c-color {
-    color: $brand-c;
-  }
-  .brand-d-color {
-    color: $brand-d;
-  }
-
 }
 
 .macropiche__code > code, .macropiche__code-output > code {
