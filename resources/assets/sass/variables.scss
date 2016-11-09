@@ -1,13 +1,16 @@
-
 // Body
 $body-bg: white;
 
 // Colors
 $brand-color: lightblue;
 $brand-gray: rgb(50%, 50%, 50%);
+
 // Typography
-$font-family-sans-serif: Helvetica, sans-serif;
-$font-family-black: Helvetica, sans-serif;
+// System fonts from https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont,
+"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+"Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
 $font-size-base: 16px;
 $line-height-base: 1.6;
 $text-color: black;
