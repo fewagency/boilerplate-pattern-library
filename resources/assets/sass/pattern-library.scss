@@ -15,7 +15,7 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  padding: 0.5em;
+  padding: 0.5rem;
 
   > nav > ul {
     list-style: none;
@@ -39,13 +39,13 @@
 
 #m893690-resources\/components\/colors {
   dd {
-    font-size: 2em;
+    font-size: 2rem;
     &::before {
       content: "";
       display: inline-block;
-      width: 3em;
-      height: 3em;
-      margin-right: .5em;
+      width: 3rem;
+      height: 3rem;
+      margin-right: .5rem;
       background-color: currentColor;
       vertical-align: middle;
     }
