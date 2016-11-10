@@ -1,12 +1,10 @@
 @import "variables";
 @import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
 
-.pattern-library-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+$pattern-library-base-margin: 1rem;
 
-  background-color: $brand-color;
+.pattern-library-header {
+  // This section sets the layout for the pattern library
 
   /*
   * Break out of any container and become full width!
@@ -15,7 +13,21 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  padding: 0.5rem;
+  // Give everything after the header margins on sides
+  ~ * {
+    margin-left: $pattern-library-base-margin;
+    margin-right: $pattern-library-base-margin;
+  }
+}
+
+.pattern-library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $brand-color;
+
+  padding: $pattern-library-base-margin;
 
   > nav > ul {
     list-style: none;
