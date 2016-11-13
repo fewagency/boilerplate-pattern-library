@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "fewagency/macropiche",
-            "version": "v3.0",
+            "version": "v3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fewagency/macropiche.git",
-                "reference": "83a696ffd80b9d79f29b232b5b5dafe2ee4578dc"
+                "reference": "0b73438b47751fa359bff78a2a61ed3716e4049d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fewagency/macropiche/zipball/83a696ffd80b9d79f29b232b5b5dafe2ee4578dc",
-                "reference": "83a696ffd80b9d79f29b232b5b5dafe2ee4578dc",
+                "url": "https://api.github.com/repos/fewagency/macropiche/zipball/0b73438b47751fa359bff78a2a61ed3716e4049d",
+                "reference": "0b73438b47751fa359bff78a2a61ed3716e4049d",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "snippet",
                 "template"
             ],
-            "time": "2016-10-16 12:10:50"
+            "time": "2016-11-13 19:08:42"
         }
     ],
     "packages-dev": [],
