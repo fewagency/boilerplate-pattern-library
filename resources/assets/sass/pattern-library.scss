@@ -55,12 +55,12 @@ $pattern-library-base-margin: 1rem;
     &::before {
       content: "";
       display: inline-block;
-      width: 4rem;
-      height: 4rem;
-      margin-right: .5rem;
-      background-color: currentColor;
       vertical-align: middle;
+      width: 2em;
+      height: 2em;
+      background-color: currentColor;
       border-radius: 50%;
+      margin-right: $pattern-library-base-margin;
     }
   }
 
