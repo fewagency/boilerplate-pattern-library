@@ -12,17 +12,11 @@
 
 <p>
   The paragraph is followed by this next paragraph.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-  ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-  id est laborum.
+  <?php include "partials/text-lorem-ipsum.html" ?>
 </p>
 
 <blockquote>
-  <p>This is a blockquote. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-    ea commodo consequat.</p>
+  <p>This is a blockquote. <?php include "partials/text-lorem-ipsum-short.html" ?></p>
   <footer>Someone Famous in <cite title="Source Title">A Very Famous Book</cite></footer>
 </blockquote>
 
