@@ -8,7 +8,6 @@
 
 <h3>Heading level 3</h3>
 <p><?php include 'partials/text-inline-semantics.html' ?></p>
-
 <p>
     The paragraph is followed by this next paragraph.
     <?php include "partials/text-lorem-ipsum.html" ?>
@@ -32,3 +31,7 @@
     <li>An item in an ordered list</li>
     <li>An item in an ordered list</li>
 </ol>
+
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
