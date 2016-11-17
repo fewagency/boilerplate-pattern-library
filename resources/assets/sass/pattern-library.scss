@@ -1,7 +1,7 @@
 @import "variables";
 @import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
 
-$pattern-library-base-margin: 1rem;
+$pattern-library-base-margin: $font-size-base * $line-height-base;
 
 .pattern-library-header {
   // This section sets the layout for the pattern library
@@ -13,14 +13,15 @@ $pattern-library-base-margin: 1rem;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
+  // Reset margin on everything in the header
+  * {
+    margin: 0;
+  }
+
   // Give everything after the header margins on sides
   ~ * {
     margin-left: $pattern-library-base-margin;
     margin-right: $pattern-library-base-margin;
-  }
-
-  * {
-    margin: 0;
   }
 }
 
