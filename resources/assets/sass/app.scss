@@ -1,7 +1,7 @@
 // Variables
 @import "variables";
-@import "reset";
-@import "typography";
+@import "partials/reset";
+@import "partials/typography";
 
 :root {
   font-family: $font-family-sans-serif;
