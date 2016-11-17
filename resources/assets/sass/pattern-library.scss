@@ -18,6 +18,10 @@ $pattern-library-base-margin: 1rem;
     margin-left: $pattern-library-base-margin;
     margin-right: $pattern-library-base-margin;
   }
+
+  * {
+    margin: 0;
+  }
 }
 
 .pattern-library-header {
