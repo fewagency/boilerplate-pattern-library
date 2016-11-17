@@ -5,7 +5,7 @@ include __DIR__ . '/../../resources/pattern-library/html-head.php';
 <div id="typography">
     <h2>Typography</h2>
     <p>An example of the basic typography.</p>
-    <?= macropiche('../../resources/components/typography.html') ?>
+    <?= macropiche('../../resources/components/typography.php') ?>
 </div>
 
 <div id="colors">

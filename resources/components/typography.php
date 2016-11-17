@@ -2,15 +2,17 @@
 <p>This is a paragraf of text.</p>
 
 <h2>Heading level 2</h2>
-<p>This is a paragraf of text.</p>
+<p>
+  <?php include 'partials/text-45-75-markers.html' ?>
+</p>
 
 <h3>Heading level 3</h3>
 <p>This paragraph has a <a href="#">link</a> and <strong>strong</strong> and <em>emphasis</em> and <b>bold</b> and
   <i>italics</i>.</p>
 
 <p>
-  The paragraph is followed by this next paragr<b title="45th character">a</b>ph.
-  Lorem ipsum dolor sit ame<b title="75th character">t</b>, consectetur adipiscing elit, sed do eiusmod tempor
+  The paragraph is followed by this next paragraph.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
   ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
   fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
