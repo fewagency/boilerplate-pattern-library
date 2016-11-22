@@ -100,3 +100,42 @@ to start from scratch!
 ## Pattern library
 The pattern/component library is built using [`macropiche`](https://github.com/fewagency/macropiche)
 and can be found in the browser at `/pattern-library/` under the `public` folder. 
+
+## Installing a CMS or framework on top of this boilerplate
+
+### WordPress - with Multisite
+It's hard getting *Multisite* to work with WordPress subdirectory installs,
+therefore we've come up with a way of installing WordPress from download instead of using Composer.
+See [issue #10](https://github.com/fewagency/boilerplate-pattern-library/issues/10) for background.
+
+#### Installing WordPress
+Adding this `post-install-cmd` script to `composer.json` will make `composer install` download the specified
+WordPress version and install it straight into the `/public/` folder - overwriting any previous WordPress files.
+
+```json
+{
+  "scripts": {
+    "post-install-cmd": [
+      "curl -sS https://wordpress.org/wordpress-4.6.1.tar.gz | tar --strip-components=1 -xvz -C public"
+    ]
+  }
+}
+```
+
+Adding this to `.gitignore` will prevent the downloaded WordPress files to be checked into version control:
+
+```gitignore
+# Ignore the wordpress files except the wp-config
+/public/wp-*
+!/public/wp-config.php
+/public/index.php
+/public/xmlrpc.php
+/public/license.txt
+/public/readme.html
+```
+
+#### Configure WordPress with Multisite
+After installing the WordPress files into the `/public/` directory, follow the rest of the usual WordPress install guides:
+
+- https://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install
+- https://codex.wordpress.org/Create_A_Network#Step_2:_Allow_Multisite
