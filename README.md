@@ -52,7 +52,7 @@ or clone this repo and then recursively remove all `.git` folders.
 2. In the project directory, run `composer create-project` to bootstrap and install composer dependencies
 
 ### Building assets
-We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project root
+We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project directory
 and then `gulp` or `gulp watch` will build the assets during development.
 
 For *browsersync* to work locally you need to set its `proxy` configuration in `gulpfile.js` to the
