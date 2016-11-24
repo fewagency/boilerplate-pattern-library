@@ -3,7 +3,7 @@
 ## How to use this repo as a boilerplate to start a new project
 1. Clone this repo with `-o boilerplate` which will name the initial remote *boilerplate* instead of *origin*:
   
-  ```shell
+  ``` shell
   git clone -o boilerplate git@github.com:fewagency/boilerplate-pattern-library.git NEW_PROJECT_DIR
   ```
   
@@ -14,7 +14,7 @@
   it has some nifty commands you'll want to copy and use below)
 4. Set up the new repo as a new remote with tracking (`-u`) in your local project:
   
-  ```shell
+  ``` shell
   git remote add origin GIT_URL_FOR_EMPTY_REPO
   git push -u origin master
   ```
@@ -23,7 +23,7 @@
 5. In the project directory, run `composer update` to use the latest dependencies.
 6. You may (optionally) delete the default branch for the `boilerplate` remote:
   
-  ```shell
+  ``` shell
   git remote set-head boilerplate -d
   ```
   
@@ -61,7 +61,7 @@ actual url used in your development environment.
 ## Deploy
 1. Install all dependencies for the build in the build environment:
   
-  ```bash
+  ``` bash
   # refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
   
   # Make sure the node version specified in the .nvmrc file is used
@@ -79,7 +79,7 @@ actual url used in your development environment.
   (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
 2. Build assets for production:
 
-  ```bash
+  ``` bash
   # Make sure the node version specified in the .nvmrc file is used
   nvm use
   
@@ -103,6 +103,8 @@ and can be found in the browser at `/pattern-library/` under the `public` folder
 
 ## Installing a CMS or framework on top of this boilerplate
 
+If your framework has it's own handling of `.env`, just remove the `fewagency/env` requirement from `composer.json`!
+
 ### WordPress - with Multisite
 It's hard getting *Multisite* to work with WordPress subdirectory installs,
 therefore we've come up with a way of installing WordPress from download instead of using Composer.
@@ -112,7 +114,7 @@ See [issue #10](https://github.com/fewagency/boilerplate-pattern-library/issues/
 Adding this `post-install-cmd` script to `composer.json` will make `composer install` download the specified
 WordPress version and install it straight into the `/public/` folder - overwriting any previous WordPress files.
 
-```json
+``` json
 {
   "scripts": {
     "post-install-cmd": [
@@ -124,7 +126,7 @@ WordPress version and install it straight into the `/public/` folder - overwriti
 
 Adding this to `.gitignore` will prevent the downloaded WordPress files to be checked into version control:
 
-```gitignore
+``` gitignore
 # Ignore the wordpress files except the wp-config
 /public/wp-*
 !/public/wp-config.php
@@ -133,6 +135,9 @@ Adding this to `.gitignore` will prevent the downloaded WordPress files to be ch
 /public/license.txt
 /public/readme.html
 ```
+
+In `public/wp-config.php` you can use `env()` to read environemnt variables from `.env`
+by following [the instructions for `fewagency/env`](https://github.com/fewagency/env). 
 
 #### Configure WordPress with Multisite
 After installing the WordPress files into the `/public/` directory, follow the rest of the usual WordPress install guides:
