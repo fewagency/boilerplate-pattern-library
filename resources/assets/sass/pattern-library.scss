@@ -13,7 +13,7 @@ $pattern-library-base-margin: $font-size-base * $line-height-base;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  // Reset margin on everything in the header
+  // Reset margins on everything in the header
   * {
     margin: 0;
   }
