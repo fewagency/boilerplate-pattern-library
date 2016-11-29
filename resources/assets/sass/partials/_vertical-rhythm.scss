@@ -23,3 +23,14 @@ $vertical-rhythm-base: $font-size-base * $line-height-base;
 body, br, li, dt, dd, th, td, option {
   margin-top: 0;
 }
+
+hr {
+  $hr-height: 1px;
+  height: $hr-height;
+  /* Center <hr> within 1 vertical space unit */
+  margin-top: $vertical-rhythm-base / 2 - $hr-height;
+  margin-bottom: $vertical-rhythm-base / 2;
+  + * {
+    margin-top: 0;
+  }
+}
