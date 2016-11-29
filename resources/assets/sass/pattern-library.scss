@@ -80,6 +80,10 @@
   word-wrap: break-word;
 }
 
+.macropiche > hr {
+  margin: 0;
+}
+
 .macropiche__source-anchor:target ~ .macropiche__output {
   /* Display vertical rhythm grid lines behind the output of the currently expanded section */
   background: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
