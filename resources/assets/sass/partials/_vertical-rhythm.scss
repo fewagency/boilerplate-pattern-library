@@ -30,6 +30,8 @@ hr {
   /* Center <hr> within 1 vertical space unit */
   margin-top: $vertical-rhythm-base / 2 - $hr-height;
   margin-bottom: $vertical-rhythm-base / 2;
+
+  /* Reset vertical space after hr */
   + * {
     margin-top: 0;
   }
