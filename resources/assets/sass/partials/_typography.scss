@@ -1,18 +1,11 @@
-// Reset vertical spacing
-p, h1, h2, h3, h4, h5, h6, ol, ul, li, blockquote {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-p, ol, ul, blockquote {
-  margin-bottom: $font-size-base * $line-height-base;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.8 * $font-size-base;
-  line-height: 2 * $font-size-base * $line-height-base;
+  line-height: 2 * $vertical-rhythm-base;
+
+  /* Reset vertical space after headings */
+  + * {
+    margin-top: 0;
+  }
 }
 
 h2 {
@@ -21,7 +14,7 @@ h2 {
 
 h3, h4, h5, h6 {
   font-size: 1.4 * $font-size-base;
-  line-height: 1 * $font-size-base * $line-height-base;
+  line-height: 1 * $vertical-rhythm-base;
 }
 
 h4 {
