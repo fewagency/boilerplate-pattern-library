@@ -1,0 +1,26 @@
+/*
+Vertical rhythm inspired by
+https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+*/
+
+$vertical-rhythm-base: $font-size-base * $line-height-base;
+
+* {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+* + * {
+  margin-top: $vertical-rhythm-base;
+}
+
+/* TODO: is this reset needed? */
+body, br, li, dt, dd, th, td, option {
+  margin-top: 0;
+}
