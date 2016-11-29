@@ -80,3 +80,9 @@ $pattern-library-base-margin: $font-size-base * $line-height-base;
 .macropiche__code > code, .macropiche__code-output > code {
   word-wrap: break-word;
 }
+
+.macropiche__source-anchor:target ~ .macropiche__output {
+  /* Display vertical rhythm grid lines for the output of the currently expanded section */
+  background: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 1px $pattern-library-base-margin;
+}
