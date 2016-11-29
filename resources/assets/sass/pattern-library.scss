@@ -1,8 +1,6 @@
 @import "variables";
 @import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
 
-$pattern-library-base-margin: $font-size-base * $line-height-base;
-
 .pattern-library-header {
   // This section sets the layout for the pattern library
 
@@ -20,8 +18,8 @@ $pattern-library-base-margin: $font-size-base * $line-height-base;
 
   // Give everything after the header margins on sides
   ~ * {
-    margin-left: $pattern-library-base-margin;
-    margin-right: $pattern-library-base-margin;
+    margin-left: $vertical-rhythm-base;
+    margin-right: $vertical-rhythm-base;
   }
 }
 
@@ -32,7 +30,7 @@ $pattern-library-base-margin: $font-size-base * $line-height-base;
 
   background-color: $brand-color;
 
-  padding: $pattern-library-base-margin;
+  padding: $vertical-rhythm-base;
 
   > nav > ul {
     list-style: none;
@@ -65,7 +63,7 @@ $pattern-library-base-margin: $font-size-base * $line-height-base;
       height: 3em;
       background-color: currentColor;
       border-radius: 50%;
-      margin-right: $pattern-library-base-margin;
+      margin-right: $vertical-rhythm-base;
     }
   }
 
@@ -84,5 +82,5 @@ $pattern-library-base-margin: $font-size-base * $line-height-base;
 .macropiche__source-anchor:target ~ .macropiche__output {
   /* Display vertical rhythm grid lines for the output of the currently expanded section */
   background: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
-  background-size: 1px $pattern-library-base-margin;
+  background-size: 1px $vertical-rhythm-base;
 }
