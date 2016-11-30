@@ -12,6 +12,10 @@
     The paragraph is followed by this next paragraph.
     <?php include "partials/text-lorem-ipsum.html" ?>
 </p>
+<hr>
+<p>
+    This paragraph comes after a <i title="a.k.a. horizontal rule">thematic break</i>.
+</p>
 
 <blockquote>
     <p>This is a blockquote. <?php include "partials/text-lorem-ipsum-short.html" ?></p>
