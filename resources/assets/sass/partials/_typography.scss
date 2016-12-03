@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1.8 * $font-size-base;
+  font-size: 1.8 * $vertical-rhythm-base;
   line-height: 2 * $vertical-rhythm-base;
 
   // Reset vertical space after headings
@@ -9,22 +9,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 1.6 * $font-size-base;
+  font-size: 1.6 * $vertical-rhythm-base;
 }
 
 h3, h4, h5, h6 {
-  font-size: 1.4 * $font-size-base;
+  font-size: 1.4 * $vertical-rhythm-base;
   line-height: 1 * $vertical-rhythm-base;
 }
 
 h4 {
-  font-size: 1.2 * $font-size-base;
+  font-size: 1.2 * $vertical-rhythm-base;
 }
 
 h5 {
-  font-size: 1.1 * $font-size-base;
+  font-size: 1.1 * $vertical-rhythm-base;
 }
 
 h6 {
-  font-size: 1 * $font-size-base;
+  font-size: 1 * $vertical-rhythm-base;
 }
