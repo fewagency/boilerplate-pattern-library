@@ -8,8 +8,6 @@ but always make sure to keep element's total height a multiple of the vertical r
 
 */
 
-$vertical-rhythm-base: $font-size-base * $line-height-base;
-
 /* Reset all vertical margins */
 * {
   margin-top: 0;
@@ -21,8 +19,8 @@ $vertical-rhythm-base: $font-size-base * $line-height-base;
   margin-top: $vertical-rhythm-base;
 }
 
-/* Reset vertical spacing before some elements */
-body, br, li, dt, dd, th, td, option {
+/* Reset the default vertical spacing before some elements */
+body, br, small, strong, em, b, i, li, dfn, dt, dd, th, td, option {
   margin-top: 0;
 }
 
@@ -38,7 +36,6 @@ body, br, li, dt, dd, th, td, option {
 
 /* Fit thematic break into the vertical rhythm */
 hr {
-  $hr-height: 1px;
   height: $hr-height; // Give the <hr> a fixed height to reset user agent styles
   margin-bottom: -$hr-height; //This negative margin pulls the succeeding element closer
   border: 0;

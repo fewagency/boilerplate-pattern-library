@@ -1,8 +1,20 @@
 /* Minimal CSS reset */
 
+:root {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-root;
+  line-height: $vertical-rhythm-base;
+  color: $text-color;
+}
+
 html, body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-size: $font-size-normal;
+  background: $body-bg;
 }
 
 /*

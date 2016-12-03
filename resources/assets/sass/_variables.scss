@@ -1,3 +1,6 @@
+// Vertical rhythm
+$vertical-rhythm-base: 2rem;
+
 // Body
 $body-bg: white;
 
@@ -11,6 +14,7 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont,
 "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
 "Fira Sans", "Droid Sans", "Helvetica Neue",
 sans-serif;
-$font-size-base: 16px;
-$line-height-base: 1.5;
+$font-size-root: 100%;
+$font-size-normal: $vertical-rhythm-base / 1.5;
 $text-color: black;
+$hr-height: 1px;
