@@ -40,9 +40,8 @@ body, br, li, dt, dd, th, td, option {
 /* Fit thematic break into the vertical rhythm */
 hr {
   $hr-height: 1px;
-  height: $hr-height;
+  height: $hr-height; // Give the <hr> a fixed height to reset user agent styles
+  margin-bottom: -$hr-height; //This negative margin pulls the succeeding element closer
   border: 0;
   background: currentColor;
-  /* The negative margin pulls the succeeding element closer */
-  margin-bottom: -$hr-height;
 }
