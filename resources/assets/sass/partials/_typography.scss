@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.8 * $font-size-base;
   line-height: 2 * $vertical-rhythm-base;
 
-  /* Reset vertical space after headings */
+  // Reset vertical space after headings
   + * {
     margin-top: 0;
   }
