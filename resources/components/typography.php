@@ -13,8 +13,9 @@
     <?php include "partials/text-lorem-ipsum.html" ?>
 </p>
 <hr>
-<p>
+<p style="background: rgba(50%, 50%, 50%, 0.1)">
     This paragraph comes after a <i title="a.k.a. horizontal rule">thematic break</i>.
+    It also has a background to visualise the space taken up by the paragraph.
 </p>
 
 <blockquote>
