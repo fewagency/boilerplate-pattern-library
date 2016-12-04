@@ -20,7 +20,7 @@ but always make sure to keep element's total height a multiple of the vertical r
 }
 
 /* Reset the default vertical spacing before some elements */
-body, br, small, strong, em, b, i, li, dfn, dt, dd, th, td, option {
+body, br, li, dfn, dt, dd, th, td, option {
   margin-top: 0;
 }
 
@@ -32,6 +32,11 @@ body, br, small, strong, em, b, i, li, dfn, dt, dd, th, td, option {
   &:not(a) {
     color: inherit;
   }
+}
+
+/* Keep smaller inline elements from making their parents growing vertically beyond their line height */
+small {
+  line-height: 1rem;
 }
 
 /* Fit thematic break into the vertical rhythm */
