@@ -4,7 +4,7 @@ https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-ne
 
 This basic pattern controls spacing between elements using margin-top.
 Feel free to override it when exceptions are needed,
-but always make sure to keep element's total height a multiple of the vertical rhythm base.
+but always make sure to keep every element's total height and vertical margins a multiple of the vertical rhythm base.
 
 */
 
@@ -34,7 +34,7 @@ body, br, li, dfn, dt, dd, th, td, option {
   }
 }
 
-/* Keep smaller inline elements from making their parents growing vertically beyond their line height */
+/* Keep smaller inline elements from making their parents grow vertically beyond their line height */
 small, sub, sup {
   line-height: 1;
 }
