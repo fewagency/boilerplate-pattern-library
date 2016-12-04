@@ -35,8 +35,8 @@ body, br, li, dfn, dt, dd, th, td, option {
 }
 
 /* Keep smaller inline elements from making their parents growing vertically beyond their line height */
-small {
-  line-height: 1rem;
+small, sub, sup {
+  line-height: 1;
 }
 
 /* Fit thematic break into the vertical rhythm */

@@ -40,3 +40,4 @@
 <h4>Heading level 4</h4>
 <h5>Heading level 5</h5>
 <h6>Heading level 6</h6>
+<p><?php include 'partials/text-inline-semantics-small.html' ?></p>
