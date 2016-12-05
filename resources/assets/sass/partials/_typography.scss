@@ -31,9 +31,12 @@ h6 {
 }
 
 #m2ab139-resources\/components\/typography .macropiche__output {
+  * {
+    margin-bottom: calc((1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / -2);
+  }
+
   * + * {
     padding-top: calc(0 * #{$vertical-rhythm-base} + (1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
-    margin-bottom: calc((1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / -2);
   }
 
   hr {
