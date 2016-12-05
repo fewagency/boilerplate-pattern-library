@@ -1,30 +1,48 @@
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1.8 * $vertical-rhythm-base;
+  font-size: 1.4 * $vertical-rhythm-base;
   line-height: 2 * $vertical-rhythm-base;
 
   // Reset vertical space after headings
   + * {
-    margin-top: 0;
+    //margin-top: 0;
+    //margin-top: calc(0 * #{$vertical-rhythm-base} + #{$baseline-shift-default});
   }
 }
 
 h2 {
-  font-size: 1.6 * $vertical-rhythm-base;
+  font-size: 1.2 * $vertical-rhythm-base;
 }
 
 h3, h4, h5, h6 {
-  font-size: 1.4 * $vertical-rhythm-base;
+  font-size: $vertical-rhythm-base / 1.1;
   line-height: 1 * $vertical-rhythm-base;
 }
 
 h4 {
-  font-size: 1.2 * $vertical-rhythm-base;
+  font-size: $vertical-rhythm-base / 1.3;
 }
 
 h5 {
-  font-size: 1.1 * $vertical-rhythm-base;
+  font-size: $vertical-rhythm-base / 1.4;
 }
 
 h6 {
-  font-size: 1 * $vertical-rhythm-base;
+  font-size: $vertical-rhythm-base / 1.5;
+}
+
+#m2ab139-resources\/components\/typography .macropiche__output {
+  * + * {
+    padding-top: calc(0 * #{$vertical-rhythm-base} + (1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+    margin-bottom: calc((1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / -2);
+  }
+
+  hr {
+    padding-top: 0;
+    margin-bottom: -1px;
+  }
+
+  h1, h2 {
+    padding-top: calc(0 * #{$vertical-rhythm-base} + (2 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+    margin-bottom: calc((2 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / -2);
+  }
 }
