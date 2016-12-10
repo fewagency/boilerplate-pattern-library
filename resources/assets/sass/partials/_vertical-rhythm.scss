@@ -5,8 +5,19 @@ https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-ne
 This basic pattern controls spacing between elements using margin-top.
 Feel free to override it when exceptions are needed,
 but always make sure to keep every element's total height and vertical margins a multiple of the vertical rhythm base.
-
 */
+
+/*
+Reset the default box-sizing to border-box but make it easy to override when needed:
+https://css-tricks.com/box-sizing/
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /* Reset all vertical margins */
 * {
