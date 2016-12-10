@@ -14,8 +14,8 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont,
 "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
 "Fira Sans", "Droid Sans", "Helvetica Neue",
 sans-serif;
-$font-size-root: 100%;
-$font-size-normal: $vertical-rhythm-base / 1.5;
-$baseline-shift-factor: 0.71;
+$font-size-root: 100%; // This adjusts the base font size
+$font-size-normal: $vertical-rhythm-base / 1.5; // This makes the line height 1.5
+$baseline-shift-factor: 0.71; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
 $text-color: black;
 $hr-height: 1px;
