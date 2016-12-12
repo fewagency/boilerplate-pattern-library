@@ -1,33 +1,43 @@
+@mixin font-vertical-rhythm($font-size: $font-size-normal, $font-family: $font-family-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
+  $lines: ceil($font-size / $vertical-rhythm-base);
+  font-size: $font-size;
+  line-height: $lines * $vertical-rhythm-base;
+}
+
+body {
+  @include font-vertical-rhythm();
+}
+
 /* Set font sizes and line-heights for those deviating from defaults */
 h1, h2, h3, h4, h5, h6 {
-  font-size: 2 * $vertical-rhythm-base;
-  line-height: 2 * $vertical-rhythm-base;
-
   // Reset vertical space after headings
   + * {
     //margin-top: 0;
   }
 }
 
+h1 {
+  @include font-vertical-rhythm(2 * $vertical-rhythm-base);
+}
+
 h2 {
-  font-size: 1.6 * $vertical-rhythm-base;
+  @include font-vertical-rhythm(1.6 * $vertical-rhythm-base);
 }
 
 h3 {
-  font-size: 1.3 * $vertical-rhythm-base;
+  @include font-vertical-rhythm(1.3 * $vertical-rhythm-base);
 }
 
-h4, h5, h6 {
-  font-size: 1 * $vertical-rhythm-base;
-  line-height: 1 * $vertical-rhythm-base;
+h4 {
+  @include font-vertical-rhythm(1 * $vertical-rhythm-base);
 }
 
 h5 {
-  font-size: 0.8 * $vertical-rhythm-base;
+  @include font-vertical-rhythm(0.8 * $vertical-rhythm-base);
 }
 
 h6 {
-  font-size: 0.75 * $vertical-rhythm-base;
+  @include font-vertical-rhythm(0.75 * $vertical-rhythm-base);
 }
 
 /* Apply default vertical shift to baseline for normal elements */
