@@ -10,14 +10,6 @@ body {
   @include font-vertical-rhythm();
 }
 
-/* Set font sizes and line-heights for those deviating from defaults */
-h1, h2, h3, h4, h5, h6 {
-  // Reset vertical space after headings
-  + * {
-    //margin-top: 0;
-  }
-}
-
 h1 {
   @include font-vertical-rhythm(2 * $vertical-rhythm-base);
 }
@@ -40,6 +32,13 @@ h5 {
 
 h6 {
   @include font-vertical-rhythm(0.75 * $vertical-rhythm-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // Reset vertical space after headings
+  + * {
+    //margin-top: 0;
+  }
 }
 
 /* Apply default vertical shift to baseline for normal elements */
