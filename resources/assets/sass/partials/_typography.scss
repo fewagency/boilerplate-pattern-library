@@ -6,32 +6,41 @@
   line-height: $lines * $vertical-rhythm-base;
 }
 
+//Set font-size and line-height to follow a vertical rhythm
+//Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
+@mixin font-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @include font-vertical-rhythm($font-size, $vertical-rhythm-base);
+  $lines: ceil($font-size / $vertical-rhythm-base);
+  position: relative;
+  top: calc((#{$lines} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+}
+
 body {
   @include font-vertical-rhythm();
 }
 
 h1 {
-  @include font-vertical-rhythm(2 * $vertical-rhythm-base);
+  @include font-baseline-rhythm(2 * $vertical-rhythm-base);
 }
 
 h2 {
-  @include font-vertical-rhythm(1.6 * $vertical-rhythm-base);
+  @include font-baseline-rhythm(1.6 * $vertical-rhythm-base);
 }
 
 h3 {
-  @include font-vertical-rhythm(1.3 * $vertical-rhythm-base);
+  @include font-baseline-rhythm(1.3 * $vertical-rhythm-base);
 }
 
 h4 {
-  @include font-vertical-rhythm(1 * $vertical-rhythm-base);
+  @include font-baseline-rhythm(1 * $vertical-rhythm-base);
 }
 
 h5 {
-  @include font-vertical-rhythm(0.8 * $vertical-rhythm-base);
+  @include font-baseline-rhythm(0.8 * $vertical-rhythm-base);
 }
 
 h6 {
-  @include font-vertical-rhythm(0.75 * $vertical-rhythm-base);
+  @include font-baseline-rhythm(0.75 * $vertical-rhythm-base);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,19 +51,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Apply default vertical shift to baseline for normal elements */
-p, blockquote, li, dt, dd, h4, h5, h6 {
-  position: relative;
-  top: calc((1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+p, blockquote, li, dt, dd {
+  @include font-baseline-rhythm();
 
   /* Reset baseline shift for those elements that may be contained within elements that are already shifted */
   p, blockquote {
     position: initial;
     top: initial;
   }
-}
-
-/* Apply vertical shift to baseline for those deviating from defaults */
-h1, h2, h3 {
-  position: relative;
-  top: calc((2 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
 }
