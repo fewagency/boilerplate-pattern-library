@@ -86,6 +86,7 @@
 
 .macropiche__source-anchor:target ~ .macropiche__output {
   /* Display vertical rhythm grid lines behind the output of the currently expanded section */
-  background: linear-gradient(rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.15) 1px, transparent 1px);
+  $grid-color: rgba(red, 0.15);
+  background: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
   background-size: 1px $vertical-rhythm-base;
 }
