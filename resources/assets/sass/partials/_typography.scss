@@ -31,7 +31,7 @@ h6 {
 
 p, blockquote, li, dt, dd, h4, h5, h6 {
   position: relative;
-  top: calc(0 * #{$vertical-rhythm-base} + (1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+  top: calc((1 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
 
   p, blockquote {
     position: initial;
@@ -41,5 +41,5 @@ p, blockquote, li, dt, dd, h4, h5, h6 {
 
 h1, h2, h3 {
   position: relative;
-  top: calc(0 * #{$vertical-rhythm-base} + (2 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+  top: calc((2 * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
 }
