@@ -1,13 +1,14 @@
-//Set font-size and line-height to follow a vertical rhythm
-//Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
+// Set font-size and line-height to follow a vertical rhythm
+// Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
 @mixin font-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   $lines: ceil($font-size / $vertical-rhythm-base);
   font-size: $font-size;
   line-height: $lines * $vertical-rhythm-base;
 }
 
-//Set font-size and line-height to follow a vertical rhythm
-//Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
+// Apply vertical rhythm and shift text down to the baseline
+// Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
+// $baseline-shift-factor is relative em and differs for every font (hint: start at 0.71 and adjust to your liking)
 @mixin font-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   @include font-vertical-rhythm($font-size, $vertical-rhythm-base);
   $lines: ceil($font-size / $vertical-rhythm-base);
