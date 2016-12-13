@@ -1,7 +1,6 @@
 $vertical-rhythm-base: 2rem !default;
 $font-size-normal: $vertical-rhythm-base / 1.5 !default; // This makes the default line height 1.5
 $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
-$baselined-elements: p, blockquote, li, dt, dd !default; // The default elements to baseline shift
 
 // Set font-size and line-height to follow a vertical rhythm
 // Make sure the supplied $font-size and $vertical-rhythm-base are of the same unit (preferably rem)
@@ -85,6 +84,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#{$baselined-elements} {
+p, blockquote, li, dt, dd {
   @include flow-baseline-rhythm();
 }
