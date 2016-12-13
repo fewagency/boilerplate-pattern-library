@@ -80,10 +80,14 @@
   word-wrap: break-word;
 }
 
+.macropiche > hr {
+  margin: 0;
+}
+
 .macropiche__source-anchor:target ~ .macropiche__output {
   // Display vertical rhythm grid lines behind the output of the currently expanded section
+  // This doesn't work very well when $vertical-rhythm-base doesn't correspond to a whole pixel value
   $grid-color: rgba(red, 0.15);
   background: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
-  // This doesn't work very well when $vertical-rhythm-base doesn't correspond to a whole pixel value
   background-size: 1px $vertical-rhythm-base;
 }
