@@ -5,14 +5,14 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
 // Set font-size and line-height to follow a vertical rhythm
 // Make sure the supplied $font-size and $vertical-rhythm-base are of the same unit (preferably rem)
 @mixin flow-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
-  /* Make the line height the next vertical rhythm multiple */
+  /* Make the line height the next vertical rhythm multiple fitting the font-size */
   $lines: ceil($font-size / $vertical-rhythm-base);
   font-size: $font-size;
   line-height: $lines * $vertical-rhythm-base;
 }
 
 // Remove any vertical shift applied by flow-baseline-rhythm()
-@mixin reset-font-baseline-rhythm() {
+@mixin reset-flow-baseline-rhythm() {
   position: initial;
   top: initial;
 }
@@ -28,6 +28,6 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
   top: calc((#{$lines} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
   * {
     /* Reset the baseline shift on everything within a shifted element to avoid shifting them twice */
-    @include reset-font-baseline-rhythm();
+    @include reset-flow-baseline-rhythm();
   }
 }
