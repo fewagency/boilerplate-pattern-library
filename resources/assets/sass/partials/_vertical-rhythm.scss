@@ -1,47 +1,44 @@
-/*
-Vertical rhythm inspired by
-https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/#layout
+/* Vertical rhythm */
+// inspired by
+// https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/#layout
 
-This basic pattern controls spacing between elements using margin-top.
-Feel free to override it when exceptions are needed,
-but always make sure to keep every element's total height and vertical margins a multiple of the vertical rhythm base!
-*/
+// This basic pattern controls spacing between elements using margin-top.
+// Feel free to override it when exceptions are needed,
+// but always make sure to keep every element's total height and vertical margins a multiple of the vertical rhythm base!
 
 $vertical-rhythm-base: 2rem !default;
 $hr-height: 1px !default;
 
-/*
-Reset the default box-sizing to border-box but make it easy to override when needed:
-https://css-tricks.com/box-sizing/
-*/
+* {
+  /* Reset all vertical margins */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+* + * {
+  /* Set default vertical spacing between all adjacent elements */
+  margin-top: $vertical-rhythm-base;
+}
+
+body, br, li, dfn, dt, dd, th, td, option {
+  /* Reset the default vertical spacing before some elements */
+  margin-top: 0;
+}
+
+hr {
+  /* Fit thematic break into the vertical rhythm */
+  height: $hr-height; // Give the <hr> a fixed height to reset user agent styles
+  margin-bottom: -$hr-height; //This negative margin pulls the succeeding element closer
+  border: 0;
+  background: currentColor;
+}
+
+/* Reset the default box-sizing to border-box but make it easy to override when needed */
+//https://css-tricks.com/box-sizing/
 html {
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-/* Reset all vertical margins */
-* {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* Set default vertical spacing between all adjacent elements */
-* + * {
-  margin-top: $vertical-rhythm-base;
-}
-
-/* Reset the default vertical spacing before some elements */
-body, br, li, dfn, dt, dd, th, td, option {
-  margin-top: 0;
-}
-
-/* Fit thematic break into the vertical rhythm */
-hr {
-  height: $hr-height; // Give the <hr> a fixed height to reset user agent styles
-  margin-bottom: -$hr-height; //This negative margin pulls the succeeding element closer
-  border: 0;
-  background: currentColor;
 }

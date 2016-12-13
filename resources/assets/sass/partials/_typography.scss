@@ -1,19 +1,24 @@
 @import "../modules/flow-rhythm";
 
-$modular-scale: 1.24 !default; // Can be calculated using pow($font-size-normal / $font-size-h6, 1 / 5) or get one from from http://www.modularscale.com
+// The modular scale can be used to size each text level a multiple of the previous one
+// 1.24 is a good scale if your normal text is $vertical-rhythm-base/1.5 and you want to keep h1 just within 2 baseline rhythm units
+// Can be calculated using pow($font-size-normal / $font-size-h6, 1 / 5)
+// or get one from from http://www.modularscale.com
+$modular-scale: 1.24 !default;
 
 /* Let all elements inherit typography by default */
 * {
   font-family: inherit;
   line-height: inherit;
+  // font-size is not inherited to keep user agent's sizes for headings and other elements
   &:not(a) {
-    /* Keep user agent link colors */
+    // Keep user agent link colors
     color: inherit;
   }
 }
 
-/* Keep smaller inline elements from making their parents grow vertically beyond their line height */
 small, sub, sup {
+  /* Keep smaller inline elements from making their parents grow vertically beyond their line height */
   line-height: 1;
 }
 
@@ -21,6 +26,10 @@ small, sub, sup {
 
 body {
   @include flow-vertical-rhythm();
+}
+
+p, blockquote, li, dt, dd {
+  @include flow-baseline-rhythm();
 }
 
 // Set heading sizes from the modular scale with h6 at normal text size
@@ -37,8 +46,4 @@ h1, h2, h3, h4, h5, h6 {
     /* Reset vertical space after headings */
     margin-top: 0;
   }
-}
-
-p, blockquote, li, dt, dd {
-  @include flow-baseline-rhythm();
 }
