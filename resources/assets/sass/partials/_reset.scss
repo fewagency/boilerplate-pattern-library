@@ -1,4 +1,5 @@
 /* Minimal CSS reset */
+// For inspiration on other resets you may want to do/include, check out: https://github.com/necolas/normalize.css
 
 :root {
   font-family: $font-family-normal;
@@ -14,8 +15,3 @@ html, body {
 body {
   background: $body-bg;
 }
-
-/*
-For inspiration on other resets you may want to do/include, check out:
-https://github.com/necolas/normalize.css
-*/
