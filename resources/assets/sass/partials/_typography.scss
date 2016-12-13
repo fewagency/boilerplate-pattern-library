@@ -1,5 +1,7 @@
 @import "../modules/flow-rhythm";
 
+$modular-scale: 1.24; // Can be calculated using pow($font-size-normal / $font-size-h6, 1 / 5) or get one from from http://www.modularscale.com
+
 /* Let all elements inherit typography by default */
 * {
   font-family: inherit;
@@ -21,28 +23,13 @@ body {
   @include flow-vertical-rhythm();
 }
 
-h1 {
-  @include flow-baseline-rhythm(2 * $vertical-rhythm-base);
-}
-
-h2 {
-  @include flow-baseline-rhythm(1.6 * $vertical-rhythm-base);
-}
-
-h3 {
-  @include flow-baseline-rhythm(1.3 * $vertical-rhythm-base);
-}
-
-h4 {
-  @include flow-baseline-rhythm(1 * $vertical-rhythm-base);
-}
-
-h5 {
-  @include flow-baseline-rhythm(0.8 * $vertical-rhythm-base);
-}
-
-h6 {
-  @include flow-baseline-rhythm(0.75 * $vertical-rhythm-base);
+// Set heading sizes from the modular scale with h6 at normal text size
+$next-modular-size: $font-size-normal;
+@each $h-level in 6, 5, 4, 3, 2, 1 {
+  h#{$h-level} {
+    @include flow-baseline-rhythm($next-modular-size);
+  }
+  $next-modular-size: $next-modular-size * $modular-scale;
 }
 
 h1, h2, h3, h4, h5, h6 {
