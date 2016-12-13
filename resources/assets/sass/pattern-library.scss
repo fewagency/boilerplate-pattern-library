@@ -15,7 +15,7 @@
   * {
     margin: 0; // Reset margins on everything in the header
 
-    @include reset-font-baseline-rhythm();
+    @include reset-flow-baseline-rhythm();
   }
 
   // Give everything after the header margins on sides
