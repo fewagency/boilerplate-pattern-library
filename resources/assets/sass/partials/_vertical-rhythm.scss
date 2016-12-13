@@ -7,6 +7,9 @@ Feel free to override it when exceptions are needed,
 but always make sure to keep every element's total height and vertical margins a multiple of the vertical rhythm base.
 */
 
+$vertical-rhythm-base: 2rem !default;
+$hr-height: 1px !default;
+
 /*
 Reset the default box-sizing to border-box but make it easy to override when needed:
 https://css-tricks.com/box-sizing/
@@ -33,21 +36,6 @@ html {
 /* Reset the default vertical spacing before some elements */
 body, br, li, dfn, dt, dd, th, td, option {
   margin-top: 0;
-}
-
-/* Let all elements inherit typography by default */
-* {
-  font-family: inherit;
-  line-height: inherit;
-  /* Keep user agent link colors */
-  &:not(a) {
-    color: inherit;
-  }
-}
-
-/* Keep smaller inline elements from making their parents grow vertically beyond their line height */
-small, sub, sup {
-  line-height: 1;
 }
 
 /* Fit thematic break into the vertical rhythm */

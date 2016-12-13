@@ -22,6 +22,21 @@
   top: initial;
 }
 
+/* Let all elements inherit typography by default */
+* {
+  font-family: inherit;
+  line-height: inherit;
+  /* Keep user agent link colors */
+  &:not(a) {
+    color: inherit;
+  }
+}
+
+/* Keep smaller inline elements from making their parents grow vertically beyond their line height */
+small, sub, sup {
+  line-height: 1;
+}
+
 /* Set basic vertical and baseline rhythm on typographic elements */
 
 body {
@@ -52,8 +67,8 @@ h6 {
   @include font-baseline-rhythm(0.75 * $vertical-rhythm-base);
 }
 
+/* Reset vertical space after headings */
 h1, h2, h3, h4, h5, h6 {
-  /* Reset vertical space after headings */
   + * {
     margin-top: 0;
   }
