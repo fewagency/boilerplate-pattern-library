@@ -1,5 +1,10 @@
+/* Typography */
+$vertical-rhythm-base: 2rem !default;
+$font-size-normal: $vertical-rhythm-base / 1.5 !default; // This makes the default line height 1.5
+$baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
+
 // Set font-size and line-height to follow a vertical rhythm
-// Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
+// Make sure the supplied $font-size and $vertical-rhythm-base are of the same unit
 @mixin font-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   $lines: ceil($font-size / $vertical-rhythm-base);
   font-size: $font-size;
