@@ -1,4 +1,5 @@
 @import "variables";
+@import "modules/flow-rhythm";
 @import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
 
 .pattern-library-header {
@@ -11,9 +12,10 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  // Reset margins on everything in the header
   * {
-    margin: 0;
+    margin: 0; // Reset margins on everything in the header
+
+    @include reset-font-baseline-rhythm();
   }
 
   // Give everything after the header margins on sides
