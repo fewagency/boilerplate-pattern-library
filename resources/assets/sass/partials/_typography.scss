@@ -1,14 +1,21 @@
-/* Typography */
 $vertical-rhythm-base: 2rem !default;
 $font-size-normal: $vertical-rhythm-base / 1.5 !default; // This makes the default line height 1.5
 $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
+$baselined-elements: p, blockquote, li, dt, dd !default; // The default elements to baseline shift
 
 // Set font-size and line-height to follow a vertical rhythm
 // Make sure the supplied $font-size and $vertical-rhythm-base are of the same unit (preferably rem)
 @mixin flow-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
+  /* Make the line height the next vertical rhythm multiple */
   $lines: ceil($font-size / $vertical-rhythm-base);
   font-size: $font-size;
   line-height: $lines * $vertical-rhythm-base;
+}
+
+// Remove any vertical shift applied by flow-baseline-rhythm()
+@mixin reset-font-baseline-rhythm() {
+  position: initial;
+  top: initial;
 }
 
 // Apply vertical rhythm and shift text down to the baseline
@@ -16,15 +23,14 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
 // Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
 @mixin flow-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   @include flow-vertical-rhythm($font-size, $vertical-rhythm-base);
+  /* Shift content down to the baseline */
   $lines: ceil($font-size / $vertical-rhythm-base);
   position: relative;
   top: calc((#{$lines} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
-}
-
-// Remove any vertical shift applied by flow-baseline-rhythm()
-@mixin reset-font-baseline-rhythm() {
-  position: initial;
-  top: initial;
+  /* Reset the baseline shift on everything within a shifted element to avoid shifting them twice */
+  * {
+    @include reset-font-baseline-rhythm();
+  }
 }
 
 /* Let all elements inherit typography by default */
@@ -79,20 +85,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-p, blockquote, li, dt, dd {
+#{$baselined-elements} {
   @include flow-baseline-rhythm();
 }
-
-/* Remove baseline shift for those elements that may appear within already shifted parents - so they're not shifted twice */
-li, dt, dd {
-  p, blockquote, li, dt, dd {
-    @include reset-font-baseline-rhythm();
-  }
-}
-
-blockquote {
-  p {
-    @include reset-font-baseline-rhythm();
-  }
-}
-
