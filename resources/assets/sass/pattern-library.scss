@@ -3,23 +3,22 @@
 @import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
 
 .pattern-library-header {
-  // This section sets the layout for the pattern library
+  /* This section sets the layout for the pattern library */
 
-  /*
-  * Break out of any container and become full width!
-  * https://css-tricks.com/full-width-containers-limited-width-parents/
-  */
+  // Break out of any container and become full width!
+  // https://css-tricks.com/full-width-containers-limited-width-parents/
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
   * {
-    margin: 0; // Reset margins on everything in the header
+    // Reset margins on everything in the header
+    margin: 0;
 
     @include reset-flow-baseline-rhythm();
   }
 
-  // Give everything after the header margins on sides
   ~ * {
+    // Give everything after the header margins on sides
     margin-left: $vertical-rhythm-base;
     margin-right: $vertical-rhythm-base;
   }
@@ -86,8 +85,9 @@
 }
 
 .macropiche__source-anchor:target ~ .macropiche__output {
-  /* Display vertical rhythm grid lines behind the output of the currently expanded section */
+  // Display vertical rhythm grid lines behind the output of the currently expanded section
   $grid-color: rgba(red, 0.15);
   background: linear-gradient($grid-color, $grid-color 1px, transparent 1px);
+  // This doesn't work very well when $vertical-rhythm-base doesn't correspond to a whole pixel value
   background-size: 1px $vertical-rhythm-base;
 }
