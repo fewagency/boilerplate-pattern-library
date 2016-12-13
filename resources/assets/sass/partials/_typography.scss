@@ -27,8 +27,8 @@ $baselined-elements: p, blockquote, li, dt, dd !default; // The default elements
   $lines: ceil($font-size / $vertical-rhythm-base);
   position: relative;
   top: calc((#{$lines} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
-  /* Reset the baseline shift on everything within a shifted element to avoid shifting them twice */
   * {
+    /* Reset the baseline shift on everything within a shifted element to avoid shifting them twice */
     @include reset-font-baseline-rhythm();
   }
 }
@@ -37,8 +37,8 @@ $baselined-elements: p, blockquote, li, dt, dd !default; // The default elements
 * {
   font-family: inherit;
   line-height: inherit;
-  /* Keep user agent link colors */
   &:not(a) {
+    /* Keep user agent link colors */
     color: inherit;
   }
 }
@@ -79,8 +79,8 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* Reset vertical space after headings */
   + * {
+    /* Reset vertical space after headings */
     margin-top: 0;
   }
 }
