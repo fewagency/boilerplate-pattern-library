@@ -7,14 +7,22 @@
 }
 
 // Apply vertical rhythm and shift text down to the baseline
-// Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
 // $baseline-shift-factor is relative em and differs for every font (hint: start at 0.71 and adjust to your liking)
+// Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
 @mixin font-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   @include font-vertical-rhythm($font-size, $vertical-rhythm-base);
   $lines: ceil($font-size / $vertical-rhythm-base);
   position: relative;
   top: calc((#{$lines} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
 }
+
+// Remove any vertical shift applied by font-baseline-rhythm()
+@mixin reset-font-baseline-rhythm() {
+  position: initial;
+  top: initial;
+}
+
+/* Set basic vertical and baseline rhythm on typographic elements */
 
 body {
   @include font-vertical-rhythm();
@@ -45,19 +53,26 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  // Reset vertical space after headings
+  /* Reset vertical space after headings */
   + * {
-    //margin-top: 0;
+    margin-top: 0;
   }
 }
 
-/* Apply default vertical shift to baseline for normal elements */
 p, blockquote, li, dt, dd {
   @include font-baseline-rhythm();
+}
 
-  /* Reset baseline shift for those elements that may be contained within elements that are already shifted */
-  p, blockquote {
-    position: initial;
-    top: initial;
+/* Remove baseline shift for those elements within already shifted parents - so they're not shifted twice */
+li, dt, dd {
+  p, blockquote, li, dt, dd {
+    @include reset-font-baseline-rhythm();
   }
 }
+
+blockquote {
+  p {
+    @include reset-font-baseline-rhythm();
+  }
+}
+
