@@ -1,6 +1,6 @@
 @import "../modules/flow-rhythm";
 
-$modular-scale: 1.24; // Can be calculated using pow($font-size-normal / $font-size-h6, 1 / 5) or get one from from http://www.modularscale.com
+$modular-scale: 1.24 !default; // Can be calculated using pow($font-size-normal / $font-size-h6, 1 / 5) or get one from from http://www.modularscale.com
 
 /* Let all elements inherit typography by default */
 * {
