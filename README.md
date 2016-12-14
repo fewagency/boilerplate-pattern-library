@@ -30,12 +30,10 @@
   (Removing the `boilerplate/HEAD` pointer from `boilerplate/master` means you will need to push specifically to
   `boilerplate/master` instead of just `boilerplate` should you want to update something back into the original 
   boilerplate repo from your new project)  
-7. Remove this section from docs & change the headline 
-
-  //TODO: Remove this section about using the boilerplate from this README
-  as it won't be relevant when your new project no longer represents a boilerplate repo!
-  
-  //TODO: Update the headline in this README to something suitable for your new project!
+7. Remove this section from docs & change the headline
+  - //TODO: Update the headline in this README to something suitable for your new project!
+  - //TODO: Remove this section about using the boilerplate from this README
+    as it won't be relevant when your new project no longer represents a boilerplate repo!  
 
 ### About boilerplate repo usage
 This method for installing boilerplate packages is inspired by
