@@ -4,7 +4,7 @@
 $font-family-normal: "sans-serif" !default;
 $font-size-root: 100% !default;
 $text-color: black !default;
-$body-bg: white !default;
+$body-background-color: white !default;
 
 :root {
   font-family: $font-family-normal;
@@ -18,5 +18,5 @@ html, body {
 }
 
 body {
-  background: $body-bg;
+  background-color: $body-background-color;
 }

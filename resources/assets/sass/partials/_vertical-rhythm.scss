@@ -30,7 +30,7 @@ hr {
   height: $hr-height; // Give the <hr> a fixed height to reset user agent styles
   margin-bottom: -$hr-height; //This negative margin pulls the succeeding element closer
   border: 0;
-  background: currentColor;
+  background-color: currentColor;
 }
 
 /* Reset the default box-sizing to border-box but make it easy to override when needed */

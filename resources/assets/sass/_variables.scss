@@ -4,7 +4,7 @@ $vertical-rhythm-base: 2rem;
 // Colors
 $brand-color: lightblue;
 $brand-gray: rgb(50%, 50%, 50%);
-$body-bg: white;
+$body-background-color: white;
 
 // Typography
 
@@ -15,8 +15,8 @@ $font-family-system: -apple-system, BlinkMacSystemFont,
 sans-serif;
 
 $font-size-root: 100% / 16 * 14; // This adjusts the base font size - make sure it corresponds to a whole pixel
-$font-family-normal: $font-family-system;
 $font-size-normal: $vertical-rhythm-base / 1.5;
+$font-family-normal: $font-family-system;
 $baseline-shift-factor-normal: 0.71;
 $modular-scale: 1.24;
 $text-color: black;
