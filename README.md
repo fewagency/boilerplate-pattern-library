@@ -48,6 +48,8 @@ or clone this repo and then recursively remove all `.git` folders.
 ## Development installation
 1. Clone the git-repository into a directory of your choice
 2. In the project directory, run `composer create-project` to bootstrap and install composer dependencies
+  
+    (If composer chokes at your PHP-version, try adding `--ignore-platform-reqs`)
 
 ### Building assets
 We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project directory
