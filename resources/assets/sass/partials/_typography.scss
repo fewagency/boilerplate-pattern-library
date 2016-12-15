@@ -41,9 +41,9 @@ $next-modular-size: $font-size-normal;
   $next-modular-size: $next-modular-size * $modular-scale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   + * {
-    /* Reset vertical space after headings */
+    /* Reset vertical space after some elements */
     margin-top: 0;
   }
 }
