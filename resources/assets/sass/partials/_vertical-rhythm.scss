@@ -6,6 +6,16 @@
 // Feel free to override it when exceptions are needed,
 // but always make sure to keep every element's total height and vertical margins a multiple of the vertical rhythm base!
 
+// When the vertical rhythm base is specified in rem, control over the scaling comes
+// from the font-size of the :root element.
+// To scale the layout, manipulate font-size on the :root element!
+
+// Warning: The root font-size can be set using any unit - but when not corresponding to
+// a full pixel value, repeating backgrounds won't follow the rhythm.
+
+// For example a root font-size of (100vh / 30 / 2) would make the page always display 30 lines of text.
+// Read more at https://24ways.org/2016/responsive-display-text/
+
 $vertical-rhythm-base: 2rem !default;
 $hr-height: 1px !default;
 
