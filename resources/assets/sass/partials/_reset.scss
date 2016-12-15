@@ -20,3 +20,13 @@ html, body {
 body {
   background-color: $body-background-color;
 }
+
+// Reset the default box-sizing to border-box but make it easy to override when needed
+// https://css-tricks.com/box-sizing/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
