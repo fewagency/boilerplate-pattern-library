@@ -1,4 +1,5 @@
 // Inspired by Indrek Paas http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+// and Florens Verschelde https://fvsch.com/code/css-locks/
 @import "strip-unit";
 
 @mixin responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media: screen) {
