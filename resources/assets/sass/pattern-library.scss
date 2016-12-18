@@ -14,7 +14,7 @@
     // Reset margins on everything in the header
     margin: 0;
 
-    @include reset-flow-baseline-rhythm();
+    @include flow-baseline-rhythm-reset();
   }
 
   ~ * {

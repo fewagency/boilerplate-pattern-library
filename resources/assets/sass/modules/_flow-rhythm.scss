@@ -16,7 +16,7 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
 }
 
 // Remove any vertical shift applied by flow-baseline-rhythm()
-@mixin reset-flow-baseline-rhythm() {
+@mixin flow-baseline-rhythm-reset() {
   position: initial;
   top: initial;
 }
@@ -30,6 +30,6 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
   top: calc((#{flow-fitting-lines($font-size, $vertical-rhythm-base)} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
   * {
     /* Reset the baseline shift on everything within a shifted element to avoid shifting twice */
-    @include reset-flow-baseline-rhythm();
+    @include flow-baseline-rhythm-reset();
   }
 }
