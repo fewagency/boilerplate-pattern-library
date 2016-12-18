@@ -1,0 +1,32 @@
+// Inspired by Indrek Paas http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+@import "strip-unit";
+
+@mixin responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media: screen) {
+  @media #{$media} and (min-width: $from-viewport-width) {
+    @each $property-with-values in $properties-with-values {
+      $property: nth($property-with-values, 1);
+      $min-value: nth($property-with-values, 2);
+      $max-value: nth($property-with-values, 3);
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$from-viewport-width}) / #{strip-unit($to-viewport-width - $from-viewport-width)});
+    }
+  }
+}
+
+@mixin responsive-lock($from-viewport-width, $to-viewport-width, $properties, $min-value, $max-value, $media: screen) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  $properties-with-values: ();
+  @each $property in $properties {
+    $properties-with-values: append($properties-with-values, ($property $min-value $max-value));
+  }
+
+  @include responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media);
+
+  @media #{$media} and (min-width: $to-viewport-width) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
