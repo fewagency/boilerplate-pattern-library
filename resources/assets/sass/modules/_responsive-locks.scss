@@ -1,10 +1,12 @@
 // Inspired by Indrek Paas http://www.sassmeister.com/gist/7f22e44ace49b5124eec
 // and Florens Verschelde https://fvsch.com/code/css-locks/
+//
 // Make sure to use the same units for viewport widths and the min and max values
-// Best results when following a vertical rhythm are achieved with pixel values
+// When following a vertical rhythm the best results are achieved with pixel values
 @import "strip-unit";
 
 // Set up responsive transitions happening between two viewport widths, not affecting anything outside the "lock"
+// Use this function to line up several transitions after each other
 // $properties-with-values can be one or more sass lists consisting of a property name followed by its min and max values to scale between
 // Example: (font-size 16px 32px) (line-height 20px 36px)
 @mixin responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media: screen) {
@@ -13,6 +15,7 @@
       $property: nth($property-with-values, 1);
       $min-value: nth($property-with-values, 2);
       $max-value: nth($property-with-values, 3);
+      //TODO: check if $max-value is empty, if so just echo the property with the $min-value
       /* Responsive linear transition:
          #{$property} scaling between viewport widths:
             |   |  _#{$max-value}
