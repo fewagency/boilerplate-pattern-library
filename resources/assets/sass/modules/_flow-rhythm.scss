@@ -2,13 +2,17 @@ $vertical-rhythm-base: 2rem !default;
 $font-size-normal: $vertical-rhythm-base / 1.5 !default; // This makes the default line height 1.5
 $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the baseline, adjust it to your liking (it's relative em and differs for every font)
 
-// Set font-size and line-height to follow a vertical rhythm
-// Make sure the supplied $font-size and $vertical-rhythm-base are of the same unit (preferably rem)
+// Find the next vertical rhythm multiple fitting the required size
+// Make sure the supplied $size-to-fit and $vertical-rhythm-base are of the same unit (preferably rem)
+@function flow-fitting-lines($size-to-fit, $vertical-rhythm-base: $vertical-rhythm-base) {
+  @return ceil($size-to-fit / $vertical-rhythm-base);
+}
+
+// Combine font-size and line-height to follow a vertical rhythm
 @mixin flow-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   /* Make the line height the next vertical rhythm multiple fitting the font-size */
-  $lines: ceil($font-size / $vertical-rhythm-base);
   font-size: $font-size;
-  line-height: $lines * $vertical-rhythm-base;
+  line-height: flow-fitting-lines($font-size, $vertical-rhythm-base) * $vertical-rhythm-base;
 }
 
 // Remove any vertical shift applied by flow-baseline-rhythm()
@@ -19,15 +23,13 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
 
 // Apply vertical rhythm and shift text down to the baseline
 // $baseline-shift-factor is relative em and differs for every font (hint: start at 0.71 and adjust to your liking)
-// Make sure the supplied $font-size and $vertical-rhytm-base are of the same unit
 @mixin flow-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   @include flow-vertical-rhythm($font-size, $vertical-rhythm-base);
   /* Shift content down to the baseline */
-  $lines: ceil($font-size / $vertical-rhythm-base);
   position: relative;
-  top: calc((#{$lines} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
+  top: calc((#{flow-fitting-lines($font-size, $vertical-rhythm-base)} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
   * {
-    /* Reset the baseline shift on everything within a shifted element to avoid shifting them twice */
+    /* Reset the baseline shift on everything within a shifted element to avoid shifting twice */
     @include reset-flow-baseline-rhythm();
   }
 }
