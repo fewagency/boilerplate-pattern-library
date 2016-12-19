@@ -37,7 +37,7 @@ html {
   display: none;
 }
 
-// Correct display in IE 9-
+// Correct display type
 article,
 aside,
 footer,
@@ -46,6 +46,8 @@ nav,
 section,
 figcaption,
 figure,
-main {
+main,
+details,
+menu {
   display: block;
 }
