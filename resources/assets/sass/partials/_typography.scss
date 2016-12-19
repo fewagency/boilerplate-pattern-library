@@ -17,9 +17,27 @@ $modular-scale: 1.24 !default;
   }
 }
 
+/* Prevent smaller inline elements from affecting the line height of their parents */
 small, sub, sup {
-  /* Keep smaller inline elements from making their parents grow vertically beyond their line height */
   line-height: 1;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
 }
 
 /* Set basic vertical and baseline rhythm on typographic elements */
