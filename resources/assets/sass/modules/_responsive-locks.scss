@@ -14,7 +14,7 @@
     @each $property, $start-value, $end-value in $properties-with-values {
       @if (type_of($end-value) != null) {
         /* Responsive linear transition:
-           #{$property} scaling between viewport widths:
+           #{$property} scaling between viewport widths
               |   |  _#{$end-value}
               |  /|  _
               | / |  _
@@ -40,7 +40,7 @@
          | / |  _
       ___|/  |  _#{$start-value}
          |   |  _
-     #{$from-viewport-width} #{$to-viewport-width}
+      #{$from-viewport-width} #{$to-viewport-width}
   */
 
   // Properties for use below the lower responsive lock at #{$from-viewport-width} viewport width
