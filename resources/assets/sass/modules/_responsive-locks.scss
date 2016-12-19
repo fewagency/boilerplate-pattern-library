@@ -34,12 +34,12 @@
 // Set up one responsive transition between two viewport widths, with the start and end values kept constant outside the "lock"
 @mixin responsive-lock($from-viewport-width, $to-viewport-width, $properties, $start-value, $end-value, $media: screen) {
   /* Responsive lock:
-     #{$properties} constant outside and scaling between viewport widths
-        |   |___#{$end-value}
-        |  /|  _
-        | / |  _
-     ___|/  |  _#{$start-value}
-        |   |  _
+      #{$properties} constant outside and scaling between viewport widths
+         |   |___#{$end-value}
+         |  /|  _
+         | / |  _
+      ___|/  |  _#{$start-value}
+         |   |  _
      #{$from-viewport-width} #{$to-viewport-width}
   */
 
