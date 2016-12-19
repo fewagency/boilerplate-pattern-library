@@ -36,3 +36,13 @@ html {
 [hidden] {
   display: none;
 }
+
+// Correct display in IE 9-
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
