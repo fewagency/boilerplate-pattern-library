@@ -34,7 +34,7 @@ p, blockquote, li, dt, dd {
 
 // Set heading sizes from the modular scale with h6 at normal text size
 $next-modular-size: $font-size-normal;
-@each $h-level in 6, 5, 4, 3, 2, 1 {
+@for $h-level from 6 through 1 {
   h#{$h-level} {
     @include flow-baseline-rhythm($next-modular-size);
   }
