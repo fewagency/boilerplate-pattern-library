@@ -25,7 +25,7 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
 // $baseline-shift-factor is relative em and differs for every font (hint: start at 0.71 and adjust to your liking)
 @mixin flow-baseline-rhythm($font-size: $font-size-normal, $baseline-shift-factor: $baseline-shift-factor-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   @include flow-vertical-rhythm($font-size, $vertical-rhythm-base);
-  /* Shift content down to the baseline */
+  /* Shift #{$font-size} text down to the baseline using a factor #{$baseline-shift-factor} */
   position: relative;
   top: calc((#{flow-fitting-lines($font-size, $vertical-rhythm-base)} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
   * {
