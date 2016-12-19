@@ -11,21 +11,22 @@
 // Example $properties-with-values: (font-size 16px 32px) (line-height 20px 36px)
 @mixin responsive-linear-transition($from-viewport-width, $to-viewport-width, $properties-with-values, $media: screen) {
   @media #{$media} and (min-width: $from-viewport-width) {
-    @each $property-with-values in $properties-with-values {
-      $property: nth($property-with-values, 1);
-      $start-value: nth($property-with-values, 2);
-      $end-value: nth($property-with-values, 3);
-      //TODO: check if $end-value is empty, if so just echo the property with the $start-value
-      /* Responsive linear transition:
-         #{$property} scaling between viewport widths:
-            |   |  _#{$end-value}
-            |  /|  _
-            | / |  _
-            |/  |  _#{$start-value}
-            |   |  _
-         #{$from-viewport-width} #{$to-viewport-width}
-      */
-      #{$property}: calc(#{$start-value} + #{strip-unit($end-value - $start-value)} * (100vw - #{$from-viewport-width}) / #{strip-unit($to-viewport-width - $from-viewport-width)});
+    @each $property, $start-value, $end-value in $properties-with-values {
+      @if (type_of($end-value) != null) {
+        /* Responsive linear transition:
+           #{$property} scaling between viewport widths:
+              |   |  _#{$end-value}
+              |  /|  _
+              | / |  _
+              |/  |  _#{$start-value}
+              |   |  _
+           #{$from-viewport-width} #{$to-viewport-width}
+        */
+        #{$property}: calc(#{$start-value} + #{strip-unit($end-value - $start-value)} * (100vw - #{$from-viewport-width}) / #{strip-unit($to-viewport-width - $from-viewport-width)});
+      } @else {
+        /* Fixed value during transition: */
+        #{$property}: $start-value;
+      }
     }
   }
 }
@@ -40,7 +41,7 @@
      ___|/  |  _#{$start-value}
         |   |  _
      #{$from-viewport-width} #{$to-viewport-width}
-      */
+  */
 
   // Properties for use below the lower responsive lock at #{$from-viewport-width} viewport width
   @each $property in $properties {
