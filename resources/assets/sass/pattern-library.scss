@@ -25,21 +25,25 @@
 }
 
 .pattern-library-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   background-color: $brand-color;
 
   padding: $vertical-rhythm-base;
 
-  > nav > ul {
-    list-style: none;
+  > * {
+    display: inline;
+    vertical-align: top;
+  }
 
-    display: flex;
-    align-items: center;
+  > nav > ul {
+    display: inline;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     > li {
+      display: inline;
+
       > a {
         display: inline-block;
         margin: .5em;
