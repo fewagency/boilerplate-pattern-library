@@ -3,7 +3,7 @@
 @import "../../../vendor/fewagency/macropiche/assets/css/optional-style";
 
 .pattern-library-header {
-  /* This section sets the layout for the pattern library */
+  /* This section sets the layout for the pattern library pages */
 
   // Break out of any container and become full width!
   // https://css-tricks.com/full-width-containers-limited-width-parents/
@@ -27,31 +27,49 @@
 .pattern-library-header {
   background-color: $brand-color;
 
-  padding: $vertical-rhythm-base;
+  padding-left: $vertical-rhythm-base;
+  padding-right: $vertical-rhythm-base;
+  line-height: 2*$vertical-rhythm-base;
+  font-size: 1*$vertical-rhythm-base;
 
   > * {
     display: inline;
-    vertical-align: middle;
+    font-size: inherit;
+    line-height: $vertical-rhythm-base;
+    //vertical-align: baseline;
   }
 
-  > nav > ul {
-    display: inline;
+  * + * {
+    margin-left: 0.5em;
+  }
 
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  > nav {
+    font-size: 0.5em;
+    vertical-align: middle;
 
-    > li {
-      display: inline;
+    * {
+      display: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
 
-      > a {
-        display: inline-block;
-        margin: .5em;
-        padding: .5em;
-        border-radius: .5em;
-        border: 1px solid currentColor;
-        color: currentColor;
-        text-decoration: none;
+    > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        > a {
+          display: inline-block;
+          line-height: .9 * $vertical-rhythm-base;
+          line-height: calc(#{$vertical-rhythm-base} - 2px);
+          border: 1px solid currentColor;
+          border-radius: .5em;
+          color: currentColor;
+          text-decoration: none;
+          padding-right: .5em;
+          padding-left: .5em;
+        }
       }
     }
   }
