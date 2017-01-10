@@ -114,8 +114,9 @@ therefore we've come up with a way of installing WordPress from download instead
 See [issue #10](https://github.com/fewagency/boilerplate-pattern-library/issues/10) for background.
 
 #### Installing WordPress
-Adding this `post-install-cmd` script to `composer.json` will make `composer install` download the specified
-WordPress version and install it straight into the `/public/` folder - overwriting any previous WordPress files.
+Adding this `post-install-cmd` script to `composer.json` will make `composer install` trigger a download of the
+specified WordPress version and install it straight into the `/public/` folder - overwriting any previous WordPress files.
+To update WordPress, change the version number in the download script, and run `composer install`. 
 
 ``` json
 {
