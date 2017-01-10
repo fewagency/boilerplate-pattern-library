@@ -95,6 +95,13 @@ actual url used in your development environment.
 
 ### When the build fails...
 
+If the build server complains about not having `unzip`, add this before the `composer install`:
+  
+  ``` bash
+    # Make sure unzip is available
+    apt-get install unzip
+  ```
+
 If `npm` fails with certificate errors, try (temporarily) adding `npm config set strict-ssl false` before `npm install`.  
 
 If the dependencies are successfully installed, but `gulp` fails for some reason,
