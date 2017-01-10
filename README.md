@@ -121,8 +121,9 @@ WordPress version and install it straight into the `/public/` folder - overwriti
 {
   "scripts": {
     "post-install-cmd": [
-      "curl -sS https://wordpress.org/wordpress-4.6.1.tar.gz | tar --strip-components=1 -xz -C public"
-    ]
+      "@install-wordpress"
+    ],
+    "install-wordpress": "curl -sS https://wordpress.org/wordpress-4.6.1.tar.gz | tar --strip-components=1 -xz -C public"
   }
 }
 ```
