@@ -63,6 +63,7 @@ actual url used in your development environment.
   
   ``` bash
   # refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
+  # The refresh-comment above defines the file changes to trigger this section for Deploybot 
   
   # Make sure the node version specified in the .nvmrc file is used
   nvm install
