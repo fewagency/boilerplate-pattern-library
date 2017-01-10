@@ -49,7 +49,7 @@ or clone this repo and then recursively remove all `.git` folders.
 1. Clone the git-repository into a directory of your choice
 2. In the project directory, run `composer create-project` to bootstrap and install composer dependencies
   
-    (If composer chokes at your PHP-version, try adding `--ignore-platform-reqs`)
+    (If composer ever chokes at your PHP-version, try adding `--ignore-platform-reqs`)
 
 ### Building assets
 We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project directory
@@ -73,7 +73,7 @@ actual url used in your development environment.
   
   # Update composer and install composer dependencies for production
   /usr/local/bin/composer self-update
-  composer install
+  composer install --no-dev
   ```
   
   (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
@@ -93,13 +93,16 @@ actual url used in your development environment.
   (This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
 
 ### When the build fails...
-If the dependencies are successfully installed, but the build fails for some reason,
+
+If `npm` fails with certificate errors, try (temporarily) adding `npm config set strict-ssl false` before `npm install`.  
+
+If the dependencies are successfully installed, but `gulp` fails for some reason,
 try running or temporarily adding `rm -rf node_modules` at the beginning of the dependency install script
 to start from scratch!
 
 ## Pattern library
 The pattern/component library is built using [`macropiche`](https://github.com/fewagency/macropiche)
-and can be found in the browser at `/pattern-library/` under the `public` folder. 
+and can be browsed at `/pattern-library/` under the `public` folder.
 
 ## Installing a CMS or framework on top of this boilerplate
 
