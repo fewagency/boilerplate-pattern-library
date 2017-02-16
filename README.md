@@ -142,7 +142,7 @@ Adding this to `.gitignore` will prevent the downloaded WordPress files to be ch
 /public/readme.html
 ```
 
-In `public/wp-config.php` you can use `env()` to read environemnt variables from `.env`
+In `public/wp-config.php` you can use `env()` to read environment variables from `.env`
 by following [the instructions for `fewagency/env`](https://github.com/fewagency/env). 
 
 #### Configure WordPress with Multisite
