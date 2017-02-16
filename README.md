@@ -166,7 +166,7 @@ project directory.
 to install a fresh Laravel app into a new temporary directory.
 2. Prepare this original boilerplate repo by pushing any local changes to central repo (should something go wrong).
 3. Create a new branch from the original repo. Why not call it `laravel-install`?
-3. Merge the Laravel file structure from the temporary directory into this boilerplate directory:
+3. Merge the Laravel file structure from the temporary directory into this boilerplate project directory:
   
   ``` bash
   rsync -av [PATH TO FRESH LARAVEL INSTALL]/ [PATH TO THIS BOILERPLATE DIRECTORY]/
@@ -176,5 +176,6 @@ that should not be overwritten. Commit merged files along the way.
 5. Run `composer update` after reviewing file `composer.json`.
 6. Run `npm update` after reviewing file `package.json`.
 7. Run `npm run dev` after reviewing file `webpack.mix.js`.
-  If `gulpfile.js` is present, try to move config over from there and then delete it.
-8. Delete the temporary fresh Laravel directory.
+  If `gulpfile.js` is present, try to move config over to `webpack.mix.js` before deleting it.
+8. Move the pattern-library files entirely into `resources/views` and set up routes for them in `routes/web.php`.
+9. Delete the temporary fresh Laravel directory.
