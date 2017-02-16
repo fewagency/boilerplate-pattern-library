@@ -157,3 +157,20 @@ After installing the WordPress files into the `/public/` directory, follow the r
 
 - https://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install
 - https://codex.wordpress.org/Create_A_Network#Step_2:_Allow_Multisite
+
+### Laravel
+Laravel can be installed on top of the boilerplate by moving a fresh Laravel install from another directory into the
+project directory.
+
+1. Follow the [Laravel instructions](https://laravel.com/docs/installation)
+to install a fresh Laravel app into a new temporary directory.
+2. Prepare this original boilerplate repo by pushing any local changes to central repo (should something go wrong).
+3. Create a new branch from the original repo. Why not call it `laravel-install`?
+3. Merge the Laravel file structure from the temporary directory into this boilerplate directory:
+  
+  ``` bash
+  rsync -av [PATH TO FRESH LARAVEL INSTALL]/ [PATH TO THIS BOILERPLATE DIRECTORY]/
+  ```
+4. Manually review every file changed by the merge and make sure to bring back any modifications from the original repo
+that should not be overwritten. Commit merged files along the way.
+5. Delete the temporary fresh Laravel directory.
