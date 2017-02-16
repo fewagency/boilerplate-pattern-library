@@ -173,4 +173,8 @@ to install a fresh Laravel app into a new temporary directory.
   ```
 4. Manually review every file changed by the merge and make sure to bring back any modifications from the original repo
 that should not be overwritten. Commit merged files along the way.
-5. Delete the temporary fresh Laravel directory.
+5. Run `composer update` after reviewing file `composer.json`.
+6. Run `npm update` after reviewing file `package.json`.
+7. Run `npm run dev` after reviewing file `webpack.mix.js`.
+  If `gulpfile.js` is present, try to move config over from there and then delete it.
+8. Delete the temporary fresh Laravel directory.
