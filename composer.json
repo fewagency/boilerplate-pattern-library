@@ -2,7 +2,6 @@
   "name": "fewagency/boilerplate-pattern-library",
   "type": "project",
   "description": "A boilerplate setup for a PHP-driven site with a pattern-library",
-  "minimum-stability": "dev",
   "license": "proprietary",
   "authors": [
     {
