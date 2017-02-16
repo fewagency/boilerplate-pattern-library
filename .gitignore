@@ -1,5 +1,9 @@
-/vendor
 /node_modules
+/vendor
+
+.DS_Store
+/.idea
+
 .env
 
 /public/css/app.css
@@ -8,5 +12,3 @@
 /public/css/pattern-library.css
 /public/css/pattern-library.css.map
 
-.DS_Store
-/.idea
