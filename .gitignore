@@ -2,10 +2,11 @@
 /node_modules
 .env
 
-/.idea
-
 /public/css/app.css
 /public/css/app.css.map
 /public/js/app.js
 /public/css/pattern-library.css
 /public/css/pattern-library.css.map
+
+.DS_Store
+/.idea
