@@ -74,7 +74,7 @@ actual url used in your development environment.
   
   # Update composer and install composer dependencies for production
   /usr/local/bin/composer self-update
-  composer install --no-dev
+  composer install --no-dev --no-interactions
   ```
   
   (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
