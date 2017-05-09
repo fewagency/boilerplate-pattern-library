@@ -5,7 +5,7 @@
 /.idea
 
 .env
-/mix-manifest.json
+mix-manifest.json
 npm-debug.log
 
 /public/css/app.css
