@@ -177,6 +177,7 @@ Commit merged files along the way.
 6. Run `composer update` after reviewing file `composer.json`.
 7. Run `npm update` after reviewing file `package.json`.
 8. Run `npm run dev` after reviewing file `webpack.mix.js`.
-If `gulpfile.js` is present, try to move config over to `webpack.mix.js` before deleting it.
+    
+    If `gulpfile.js` is present, try to move config over to `webpack.mix.js` before deleting it.
 9. Move the pattern-library files entirely into `resources/views` and set up routes for them in `routes/web.php`.
 10. Delete the temporary fresh Laravel directory.
