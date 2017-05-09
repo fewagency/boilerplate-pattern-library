@@ -12,6 +12,7 @@
   
   (If that's on github, keep the resulting page open in your browser -
   it has some nifty commands you'll want to copy and use below)
+  
 4. Set up the new repo as a new remote with tracking (`-u`) in your local project:
   
   ``` shell
@@ -20,6 +21,7 @@
   ```
   
   (These two lines can be copied from the page github displays after creating an empty repo)
+  
 5. In the project directory, run `composer update` to use the latest dependencies.
 6. You may (optionally) delete the default branch for the `boilerplate` remote:
   
@@ -29,7 +31,8 @@
   
   (Removing the `boilerplate/HEAD` pointer from `boilerplate/master` means you will need to push specifically to
   `boilerplate/master` instead of just `boilerplate` should you want to update something back into the original 
-  boilerplate repo from your new project)  
+  boilerplate repo from your new project)
+  
 7. Remove this section from docs & change the headline
   - **TODO:** Update the headline in this README to something suitable for your new project!
   - **TODO:** Remove this section about using the boilerplate from this README
@@ -52,17 +55,14 @@ or clone this repo and then recursively remove all `.git` folders.
     (If composer ever chokes at your PHP-version, try adding `--ignore-platform-reqs`)
 
 ### Building assets
-We're using [Laravel's Elixir](http://laravel.com/docs/elixir) for assets, so run `npm install` in the project directory
-and then `gulp` or `gulp watch` will build the assets during development.
-
-For *browsersync* to work locally you need to set its `proxy` configuration in `gulpfile.js` to the
-actual url used in your development environment.
+We're using [Laravel Mix](http://laravel.com/docs/mix) for assets, so run `npm install` in the project directory
+and then `npm run dev` or `npm run watch` will build the assets during development.
 
 ## Deploy
 1. Install all dependencies for the build in the build environment:
   
   ``` bash
-  # refresh: .nvmrc, package.json, gulpfile.js, composer.json, composer.lock
+  # refresh: .nvmrc, package.json, composer.json, composer.lock
   # The refresh-comment above defines the file changes to trigger this section for Deploybot 
   
   # Make sure the node version specified in the .nvmrc file is used
@@ -78,6 +78,7 @@ actual url used in your development environment.
   ```
   
   (This goes in the *Advanced options* - *Cached build commands* section in Deploybot)
+  
 2. Build assets for production:
 
   ``` bash
@@ -85,10 +86,11 @@ actual url used in your development environment.
   nvm use
   
   # Build assets for production
-  gulp --production
+  npm run production
   ```
 
   (This goes in the *Compile, compress, or minimize your code* section in Deploybot)
+  
 3. The `node_modules` directory may be excluded from actual deploy after the build has finished
 
   (This goes in the *Exclude certain paths from being uploaded* section in Deploybot)
@@ -103,10 +105,6 @@ If the build server complains about not having `unzip`, add this before the `com
   ```
 
 If `npm` fails with certificate errors, try (temporarily) adding `npm config set strict-ssl false` before `npm install`.  
-
-If the dependencies are successfully installed, but `gulp` fails for some reason,
-try running or temporarily adding `rm -rf node_modules` at the beginning of the dependency install script
-to start from scratch!
 
 ## Pattern library
 The pattern/component library is built using [`macropiche`](https://github.com/fewagency/macropiche)
@@ -166,16 +164,17 @@ project directory.
 to install a fresh Laravel app into a new temporary directory.
 2. Prepare this original boilerplate repo by pushing any local changes to central repo (should something go wrong).
 3. Create a new branch from the original repo. Why not call it `laravel-install`?
-3. Merge the Laravel file structure from the temporary directory into this boilerplate project directory:
+4. Merge the Laravel file structure from the temporary directory into this boilerplate project directory:
   
   ``` bash
   rsync -av [PATH TO FRESH LARAVEL INSTALL]/ [PATH TO THIS BOILERPLATE DIRECTORY]/
   ```
-4. Manually review every file changed by the merge and make sure to bring back any modifications from the original repo
+  
+5. Manually review every file changed by the merge and make sure to bring back any modifications from the original repo
 that should not be overwritten. Commit merged files along the way.
-5. Run `composer update` after reviewing file `composer.json`.
-6. Run `npm update` after reviewing file `package.json`.
-7. Run `npm run dev` after reviewing file `webpack.mix.js`.
+6. Run `composer update` after reviewing file `composer.json`.
+7. Run `npm update` after reviewing file `package.json`.
+8. Run `npm run dev` after reviewing file `webpack.mix.js`.
   If `gulpfile.js` is present, try to move config over to `webpack.mix.js` before deleting it.
-8. Move the pattern-library files entirely into `resources/views` and set up routes for them in `routes/web.php`.
-9. Delete the temporary fresh Laravel directory.
+9. Move the pattern-library files entirely into `resources/views` and set up routes for them in `routes/web.php`.
+10. Delete the temporary fresh Laravel directory.
