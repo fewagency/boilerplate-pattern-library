@@ -3,6 +3,11 @@
 class LocalValetDriver extends BasicValetDriver
 {
     /**
+     * @var string The public web directory, if deeper under the root directory
+     */
+    protected $public_dir = 'public';
+
+    /**
      * Determine if the driver serves the request.
      *
      * @param  string $sitePath
@@ -25,7 +30,8 @@ class LocalValetDriver extends BasicValetDriver
      */
     public function isStaticFile($sitePath, $siteName, $uri)
     {
-        if (file_exists($staticFilePath = $sitePath . '/public' . $uri)) {
+        $sitePath = $this->realSitePath($sitePath);
+        if ($this->isActualFile($staticFilePath = $sitePath . $uri)) {
             return $staticFilePath;
         }
 
@@ -42,8 +48,23 @@ class LocalValetDriver extends BasicValetDriver
      */
     public function frontControllerPath($sitePath, $siteName, $uri)
     {
-        $sitePath .= "/public";
+        $sitePath = $this->realSitePath($sitePath);
 
         return parent::frontControllerPath($sitePath, $siteName, $uri);
+    }
+
+    /**
+     * Translate the site path to the actual public directory
+     *
+     * @param $sitePath
+     * @return string
+     */
+    protected function realSitePath($sitePath)
+    {
+        if ($this->public_dir) {
+            $sitePath .= "/" . $this->public_dir;
+        }
+
+        return $sitePath;
     }
 }
