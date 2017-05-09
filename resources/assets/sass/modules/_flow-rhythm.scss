@@ -28,8 +28,8 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
   /* Shift #{$font-size} text down to the baseline using a factor #{$baseline-shift-factor} */
   position: relative;
   top: calc((#{flow-fitting-lines($font-size, $vertical-rhythm-base)} * #{$vertical-rhythm-base} - 1em * #{$baseline-shift-factor}) / 2);
-  * {
-    /* Reset the baseline shift on everything within a shifted element to avoid shifting twice */
+  p, blockquote, address, li, dt, dd {
+    /* Reset the baseline shift on some default elements within a shifted element to avoid shifting twice */
     @include flow-baseline-rhythm-reset();
   }
 }
