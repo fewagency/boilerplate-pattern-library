@@ -15,6 +15,13 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
   line-height: flow-fitting-lines($font-size, $vertical-rhythm-base) * $vertical-rhythm-base;
 }
 
+// Set a font-size from a desired line-height and a number of vertical-rhytm lines to cover
+@mixin flow-font-size-from-line-height($line-height: 1.1, $lines: 2, $vertical-rhythm-base: $vertical-rhythm-base) {
+  /* Make the font size match the desired line-height covering the number of lines */
+  font-size: $lines * $vertical-rhythm-base / $line-height;
+  line-height: $lines * $vertical-rhythm-base;
+}
+
 // Remove any vertical shift applied by flow-baseline-rhythm()
 @mixin flow-baseline-rhythm-reset() {
   position: initial;
