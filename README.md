@@ -179,5 +179,7 @@ Commit merged files along the way.
 8. Run `npm run dev` after reviewing file `webpack.mix.js`.
     
     If `gulpfile.js` is present, try to move config over to `webpack.mix.js` before deleting it.
-9. Move the pattern-library files entirely into `resources/views` and set up routes for them in `routes/web.php`.
-10. Delete the temporary fresh Laravel directory.
+
+9. Delete file `LocalValetDriver.php` as the default Laravel Valet driver should take over.
+10. Move the pattern-library files entirely into `resources/views` and set up routes for them in `routes/web.php`.
+11. Delete the temporary fresh Laravel directory.
