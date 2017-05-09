@@ -46,7 +46,7 @@ body {
   @include flow-vertical-rhythm();
 }
 
-p, blockquote, li, dt, dd {
+p, blockquote, address, li, dt, dd {
   @include flow-baseline-rhythm();
 }
 
