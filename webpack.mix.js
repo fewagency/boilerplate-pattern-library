@@ -1,6 +1,5 @@
 let mix = require('laravel-mix');
 
-//This is added for `npm run hot` to work
 mix.setPublicPath('public');
 
 /*
