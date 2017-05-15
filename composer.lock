@@ -4,12 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef818eee11c95bbab615df3b263de196",
-    "content-hash": "56afb42e73299f091b6368152c643474",
+    "content-hash": "331b90a7985e7be19d6bead3d7ee8f81",
     "packages": [
         {
             "name": "fewagency/env",
-            "version": "dev-master",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fewagency/env.git",
@@ -58,27 +57,28 @@
                 "dotenv",
                 "env"
             ],
-            "time": "2016-11-24 08:37:36"
+            "time": "2016-11-24T08:37:36+00:00"
         },
         {
             "name": "fewagency/macropiche",
-            "version": "v3.1",
+            "version": "v3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fewagency/macropiche.git",
-                "reference": "0b73438b47751fa359bff78a2a61ed3716e4049d"
+                "reference": "019210268788d8fdcc45861af91162df6cca376a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fewagency/macropiche/zipball/0b73438b47751fa359bff78a2a61ed3716e4049d",
-                "reference": "0b73438b47751fa359bff78a2a61ed3716e4049d",
+                "url": "https://api.github.com/repos/fewagency/macropiche/zipball/019210268788d8fdcc45861af91162df6cca376a",
+                "reference": "019210268788d8fdcc45861af91162df6cca376a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "illuminate/view": "^5.2"
+                "duncan3dc/blade": "^3.4",
+                "jenssegers/blade": "^1.1"
             },
             "type": "library",
             "autoload": {
@@ -108,20 +108,20 @@
                 "snippet",
                 "template"
             ],
-            "time": "2016-11-13 19:08:42"
+            "time": "2017-05-15T09:01:52+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "dev-master",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "e5a077e823e5ea0b3714b78cd260738cd583aeeb"
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/e5a077e823e5ea0b3714b78cd260738cd583aeeb",
-                "reference": "e5a077e823e5ea0b3714b78cd260738cd583aeeb",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
                 "shasum": ""
             },
             "require": {
@@ -158,12 +158,12 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-11-28 23:08:37"
+            "time": "2016-09-01T10:05:43+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
