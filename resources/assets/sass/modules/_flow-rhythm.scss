@@ -8,7 +8,7 @@ $baseline-shift-factor-normal: 0.71 !default; // This shifts text down to the ba
   @return ceil($size-to-fit / $vertical-rhythm-base);
 }
 
-// Combine font-size and line-height to follow a vertical rhythm
+// Set a line-height from a desired font-size to follow a vertical rhythm
 @mixin flow-vertical-rhythm($font-size: $font-size-normal, $vertical-rhythm-base: $vertical-rhythm-base) {
   /* Make the line height the next vertical rhythm multiple fitting the font-size */
   font-size: $font-size;
