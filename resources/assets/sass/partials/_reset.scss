@@ -51,7 +51,17 @@ figure,
 main,
 details,
 menu,
-hgroup //deprecated but may be useful to include anyway
+hgroup // hgroup is deprecated but may be useful to include anyway
 {
   display: block;
+}
+
+// Remove the border on images inside links in IE 10-
+img {
+  border-style: none;
+}
+
+// Correct svg overflow in IE
+svg:not(:root) {
+  overflow: hidden;
 }
