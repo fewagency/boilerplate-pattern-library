@@ -65,3 +65,10 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
+
+// Responsive images
+// https://alligator.io/css/minimal-css-reset/
+img {
+  max-width: 100%;
+  height: auto;
+}
