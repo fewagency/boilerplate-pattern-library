@@ -1,6 +1,7 @@
 @import "../modules/flow-rhythm";
 
 // The modular scale can be used to size each text level a multiple of the previous one
+// TODO: Check if the font size ratio should be swapped here to $font-size-h1 / $font-size-normal
 // Can be calculated using pow($font-size-normal / $font-size-h1, 1 / 5)
 // or get one from from http://www.modularscale.com
 // 1.24 is a good scale if your normal text is $vertical-rhythm-base/1.5 and you want to keep h1 just within 2 baseline rhythm units
